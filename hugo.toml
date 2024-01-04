@@ -1,0 +1,5 @@
+baseURL = 'https://decysif.fr'
+languageCode = 'en-us'
+title = 'DeCySif Project'
+
+theme = 'ananke'

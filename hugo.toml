@@ -10,18 +10,16 @@ DefaultContentLanguage = "fr"
 [languages]
 
 [languages.fr]
-weight = 1
-[languages.fr.params]
-legal = "DéCySif est financé par l'appel à projet i-Démo et la région Ile-de-France."
-
+  weight = 1
+  [languages.fr.params]
+    legal = "DéCySif est financé par l'appel à projet i-Démo et la région Ile-de-France."
 [languages.en]
-weight = 2
-disabled = true
-[languages.en.params]
-legal = "DéCySif is a project funded by the i-Démo call and the Ile-de-France region."
+  weight = 2
+  disabled = true
+  [languages.en.params]
+    legal = "DéCySif is a project funded by the i-Démo call and the Ile-de-France region."
 
 [params]
 text_color = ""
 [params.contact]
 development = "https://formspree.io/f/mayreylq"
-

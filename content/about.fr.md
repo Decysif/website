@@ -5,8 +5,8 @@ featured_image: ''
 menu:
   main:
     weight: 1
-_build:
-  list: never
+#_build:
+#  list: never
 ---
 
 # Le projet

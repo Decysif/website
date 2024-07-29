@@ -2,6 +2,7 @@ baseURL = 'https://decysif.fr'
 languageCode = 'fr'
 title = 'DéCySif'
 copyright = 'OCamlPro'
+SectionPagesMenu = "main"
 
 theme = 'ananke'
 

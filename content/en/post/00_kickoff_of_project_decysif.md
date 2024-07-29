@@ -16,7 +16,12 @@ the 14th arrondissement of Paris for the project kickoff meeting!
 It was a great opportunity to review the ambitious goals of the project, exchange
 between partners about the organization and agenda of the work. The meeting ended,
 as is often the case with these well-acquainted partners, with intense technical
-discussions on the interaction between Why3 and Alt-Ergo, use cases for testing
-Creusot, and techniques for detecting vulnerabilities using TIS Analyzer or Spark.
+discussions on the interaction between [Why3](https://www.why3.org/)
+([repository](https://github.com/AdaCore/why3)) and
+[Alt-Ergo](https://alt-ergo.ocamlpro.com/)
+([repository](https://github.com/OCamlPro/alt-ergo)), use cases for testing
+Creusot, and techniques for detecting vulnerabilities using [TIS
+Analyzer](https://www.trust-in-soft.com/trustinsoft-analyzer) ([repository of
+the OS kernel](https://github.com/TrustInSoft/tis-kernel)) or Spark.
 
 

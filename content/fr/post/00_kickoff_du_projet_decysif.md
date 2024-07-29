@@ -17,7 +17,17 @@ du projet !
 Une bonne opportunité de revoir les objectifs ambitieux du projet, d’échanger
 entre les partenaires sur l’organisation et l’agenda des travaux. La réunion
 s’est terminée, comme souvent entre ces partenaires qui se connaissent bien,
-par des discussions techniques intenses, sur l'interaction entre Why3 et
-Alt-Ergo, sur les cas d’usages pour tester Creusot, ou encore sur les
-techniques de détection de failles en utilisant TIS Analyzer ou Spark.
+par des discussions techniques intenses, sur l'interaction entre
+[Why3](https://www.why3.org/) ([code source](https://github.com/AdaCore/why3))
+et [Alt-Ergo](https://alt-ergo.ocamlpro.com/) ([code
+source](https://github.com/OCamlPro/alt-ergo)), sur les cas d’usages pour
+tester Creusot, ou encore sur les techniques de détection de failles en
+utilisant [TIS Analyzer](https://www.trust-in-soft.com/trustinsoft-analyzer)
+([code source de son Kernel libre](https://github.com/TrustInSoft/tis-kernel))
+ou Spark.
+
+
+discussions on the interaction between  and
+, use cases for testing
+Creusot, and techniques for detecting vulnerabilities using  or Spark.
 

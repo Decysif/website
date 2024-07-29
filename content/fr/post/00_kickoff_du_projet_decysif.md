@@ -1,7 +1,8 @@
 ---
 date: 2023-12-19T10:58:08-04:00
 description: "Les membres du projet se réunissent au lancement du projet !"
-featured_image: "/images/Pope-Edouard-de-Beaumont-1844.jpg"
+featured_image: '/images/Decysif.png'
+thumbnail: '/images/logo_decysif_excellence_for_security_black.svg'
 tags: ["événement","clé"]
 title: "Diagnostic de Cyber-Sécurité Formel: DéCySif"
 ---

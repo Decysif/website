@@ -1,10 +1,9 @@
 ---
 title: "DéCySif"
-
 description: "Formal verification in the service of safety"
 cascade:
-  #featured_image: '/images/gohugo-default-sample-hero-image.jpg'
   featured_image: '/images/Decysif.png'
+type: page
 ---
 
 DéCySif is a regional R&D project funded by an i-Démo call and the

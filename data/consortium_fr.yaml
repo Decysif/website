@@ -4,7 +4,6 @@
     Fondée en 1994, AdaCore conçoit et fournit des outils de développement et
     de vérification de logiciels destinés à des applications pour lesquelles la
     sûreté, la sécurité et la fiabilité sont des éléments critiques.
-    \
     L'utilisation des produits AdaCore connaît une croissance continue dans des
     applications critiques telles que les systèmes spatiaux, l'avionique
     commerciale, les systèmes militaires, le contrôle aérien, les systèmes
@@ -12,7 +11,6 @@
     jouit d'une base fournie de clients internationaux en croissance
     constante; visitez le site www.adacore.com/industries/ pour de plus amples
     informations.
-    \
     Les produits AdaCore sont libres et accompagnés d'un support expert en
     ligne fourni par les développeurs eux-mêmes. La société possède un siège
     nord-américain basé à New York et un siège européen basé à Paris.
@@ -27,7 +25,6 @@
     [Toccata](http://toccata.gitlabpages.inria.fr/toccata/), localisés à Orsay,
     France ; et communs à l'Université Paris-Saclay, au CNRS, et au centre de
     recherche INRIA Saclay - Île-de-France.
-    \
     L'objectif général de l'équipe est de promouvoir les spécifications
     formelles et les preuves assistées par ordinateur dans le cadre du
     développement de logiciels requérant un haut niveau de confiance dans leur
@@ -41,7 +38,6 @@
     ou à la dette technique. La société est engagée dans l'*open source*
     et contribue aux langages Rust, WebAssembly et OCaml. La société développe
     aussi le prouveur SMT Alt-Ergo utilisé dans DéCySif.
-    \
     OCamlPro est également active dans le domaine de la certification
     Critères Communs au niveau EAL6 et l'utilisation des méthodes formelles
     (Coq, Lean4, Why3).

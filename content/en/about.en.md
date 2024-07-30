@@ -3,7 +3,10 @@ title: "About"
 description: "The Actors of Project DéCySif"
 omit_header_text: true
 featured_image: '/images/Decysif.png'
-menu: main
+type: page
+menu:
+  main:
+    weight: 2
 ---
 
 # The project

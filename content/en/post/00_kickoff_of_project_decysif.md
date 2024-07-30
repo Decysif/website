@@ -20,8 +20,11 @@ discussions on the interaction between [Why3](https://www.why3.org/)
 ([repository](https://github.com/AdaCore/why3)) and
 [Alt-Ergo](https://alt-ergo.ocamlpro.com/)
 ([repository](https://github.com/OCamlPro/alt-ergo)), use cases for testing
-Creusot, and techniques for detecting vulnerabilities using [TIS
+[Creusot (code source)](https://github.com/creusot-rs/creusot), and techniques
+for detecting vulnerabilities using [TIS
 Analyzer](https://www.trust-in-soft.com/trustinsoft-analyzer) ([repository of
-the OS kernel](https://github.com/TrustInSoft/tis-kernel)) or Spark.
+the OS kernel](https://github.com/TrustInSoft/tis-kernel)) or
+[Spark](https://www.adacore.com/about-spark)
+([repository](https://github.com/AdaCore/spark2014)).
 
 

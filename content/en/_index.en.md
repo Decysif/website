@@ -1,6 +1,6 @@
 ---
 title: "DéCySif"
-description: "Formal verification in the service of safety"
+description: "Formal verification in the service of safety and security"
 cascade:
   featured_image: '/images/Decysif.png'
 type: page

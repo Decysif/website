@@ -1,3 +1,4 @@
+  <meta property="og:image" content="/images/logo_decysif_excellence_for_security_black.svg"/>
 {{ $opts := dict "transpiler" "libsass" "targetPath" "css/style.css" }}
 {{ with resources.Get "sass/main.scss" | toCSS $opts | minify | fingerprint }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">

@@ -1,0 +1,86 @@
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
+{{ define "main" }}
+<div id="BEGIN:layouts/index.html"></div>
+
+<!-- Home block -->
+<div class="flex-l mt2 mw8 center">
+  <article class="center cf pv5 ph3 ph4-ns mw7">
+    <header>
+      <h2 class="f2" id="{{ .Params.sectiontitle }}">
+        {{ .Params.sectiontitle }}
+      </h2>
+    </header>
+    <div class="nested-copy-line-height lh-copy f4 nested-links {{ $.Param "text_color" | default "mid-gray" }}">
+      {{ .Params.synopsis | markdownify }}
+    </div>
+  </article>
+</div>
+
+<!-- Project block -->
+<div class="flex-l mt2 mw8 center">
+  <article class="center cf pv5 ph3 ph4-ns mw7">
+    <header>
+      <h2 class="f2" id="{{ replaceRE " " "" .Params.project.sectiontitle }}">
+        {{ .Params.project.sectiontitle }}
+      </h2>
+    </header>
+    <div class="nested-copy-line-height lh-copy f4 nested-links {{ $.Param "text_color" | default "mid-gray" }}">
+      {{ .Params.project.content | markdownify}}
+    </div>
+    <figure>
+      <img src="/images/Organisation-outils.png" alt="Une image qui montre les liens entre les outils développés par les acteurs du projet DéCySif. On voit au centre la passerelle Why3 et de part et d'autre, les langages utilisés et les prouveurs que la passerelle instrumentalise.">
+    </figure>
+    <h3 class="f3" id="{{ replaceRE " " "" .Params.coordinator.sectiontitle }}">
+      {{ .Params.coordinator.sectiontitle }}
+    </h3>
+    </header>
+    <div class="nested-copy-line-height lh-copy f4 nested-links {{ $.Param "text_color" | default "mid-gray" }}">
+      {{ .Params.coordinator.content | markdownify}}
+    </div>
+  </article>
+</div>
+
+<!-- Consortium block -->
+<div class="flex-l mt2 mw8 center">
+  <article class="center cf pv5 ph3 ph4-ns mw7">
+    <header>
+      <h2 class="f2" id="{{ replaceRE " " "" .Params.collaborators.sectiontitle }}">
+        {{ .Params.collaborators.sectiontitle }}
+      </h2>
+    </header>
+    <div class="flex flex-column">
+      {{ range $.Params.collaborators.consortium }}
+      <article class="center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+          <div class="tc center">
+            <h1 class="f4" id="{{ .name }}">{{ .name }}</h1>
+              <hr class="mw3 bb bw1 b--black-10">
+          </div>
+          <p class="lh-copy measure center f6 black-70 tj">
+              {{ .description | markdownify }}
+          </p>
+          <div class="tc center">
+              <hr class="mw3 bb bw1 b--black-10">
+              <a class="f6 link dim br3 ph3 pv2 mb2 dib white bg-gray" href="{{ .url }}">{{ .url }}</a>
+          </div>
+      </article>
+      {{ end }}
+    </div>
+  </article>
+</div>
+
+<!-- Softwares block -->
+<div class="flex-l mt2 mw8 center">
+  <article class="center cf pv5 ph3 ph4-ns mw7">
+    <header>
+      <h2 class="f2" id="{{ replaceRE " " "" .Params.software.sectiontitle }}">
+        {{ .Params.software.sectiontitle }}
+      </h2>
+    </header>
+    <div class="flex flex-column">
+      All softwares
+    </div>
+  </article>
+</div>
+
+<div id="END:layouts/index.html"></div>
+{{ end }}

@@ -30,3 +30,7 @@ Paginate = 10
   recent_posts_number = 5
 [params.contact]
   development = "https://formspree.io/f/mayreylq"
+
+# Helps display HTML inlined inside of frontmatter variables
+[markup.goldmark.renderer]
+  unsafe = true

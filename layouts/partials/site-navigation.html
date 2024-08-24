@@ -9,17 +9,37 @@
     </a>
     <div class="flex-l items-center">
       {{ partial "i18nlist.html" . }}
-      {{ if .Site.Menus.main }}
+      {{ with .Site.GetPage "index.md"  }}
         <ul class="{{ cond (eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">
-          {{ range .Site.Menus.main }}
           <li class="list f5 f4-ns fw4 dib {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
-            <a class="hover-white no-underline white-90" href="{{ .URL }}" title="{{ i18n "pageTitle" . }}">
-              {{ .Name }}
+            <a class="hover-white no-underline white-90" href="{{ .RelPermalink }}#{{ .Params.sectiontitle }}" title="{{ i18n "pageTitle" . }}">
+              {{ .Params.sectiontitle  }}
+            </a>
+          </li>
+          <li class="list f5 f4-ns fw4 dib {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
+            <a class="hover-white no-underline white-90" href="{{ .RelPermalink }}#{{ replaceRE " " "" .Params.project.sectiontitle }}" title="{{ i18n "pageTitle" . }}">
+              {{ .Params.project.sectiontitle }}
+            </a>
+          </li>
+          <li class="list f5 f4-ns fw4 dib {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
+            <a class="hover-white no-underline white-90" href="{{ .RelPermalink }}#{{ replaceRE " " "" .Params.collaborators.sectiontitle }}" title="{{ i18n "pageTitle" . }}">
+              {{ .Params.collaborators.sectiontitle }}
+            </a>
+          </li>
+          <li class="list f5 f4-ns fw4 dib {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
+            <a class="hover-white no-underline white-90" href="{{ .RelPermalink }}#{{ replaceRE " " "" .Params.software.sectiontitle }}" title="{{ i18n "pageTitle" . }}">
+              {{ .Params.software.sectiontitle }}
+            </a>
+          </li>
+          {{ end }}
+          {{ with .Site.GetPage "/post/_index.md" }}
+          <li class="list f5 f4-ns fw4 dib {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
+            <a class="hover-white no-underline white-90" href="{{ .RelPermalink }}" title="{{ i18n "pageTitle" . }}">
+              {{ .Title }}
             </a>
           </li>
           {{ end }}
         </ul>
-      {{ end }}
       {{ partialCached "social-follow.html" . }}
     </div>
   </div>

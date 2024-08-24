@@ -95,4 +95,66 @@ collaborators:
 
 software:
   sectiontitle: "Les logiciels"
+  tools:
+    - name: "Why3, une plateforme de vérification déductive de programmes."
+      url:
+        - "https://www.why3.org/"
+      description: "Why3 fournit un langage riche pour la spécification et la
+      programmation, appelé WhyML, et s'appuie sur des prouveurs de théorèmes
+      externes, à la fois automatisés et interactifs, pour valider les
+      conditions de vérification. Why3 est livré avec une bibliothèque standard
+      de théories logiques (arithmétique entière et réelle, opérations
+      booléennes, ensembles, etc.) et de structures de données de programmation
+      de base (tableaux, files d'attente, tables de hachage, etc. ). Un
+      utilisateur peut écrire des programmes WhyML directement et obtenir des
+      programmes OCaml corrects par construction via un mécanisme d'extraction
+      automatisé.
+      <br />
+      <br />
+      WhyML est également utilisé comme langage intermédiaire pour la
+      vérification des programmes C, Ada, Rust, etc. Why3 peut être facilement
+      étendu avec la prise en charge de nouveaux prouveurs de théorèmes. Why3
+      peut être utilisé comme bibliothèque logicielle, via une API OCaml."
+
+    - name: "Creusot, le logiciel pour la vérification déductive de code Rust."
+      url:
+        - "https://github.com/creusot-rs/creusot"
+      description: "Creusot vérifie que le code qui lui est donné à analyser
+      est exempt de risque de « panic », de débordement arithmétique ou
+      d'assertion invalide. En ajoutant des annotations, on peut aller plus
+      loin et vérifier que le code est conforme à une spécification formelle de
+      son comportement attendu.
+      <br />
+      <br />
+      Creusot fonctionne en traduisant le code Rust en WhyML, le langage de
+      vérification et de spécification de Why3. Les utilisateurs peuvent alors
+      exploiter toute la puissance de Why3 pour décharger semi-automatiquement
+      les conditions de vérification."
+
+    - name: "Alt-Ergo, le prouveur automatique pour la vérification de code."
+      url:
+       - "https://alt-ergo.ocamlpro.com"
+       - "https://github.com/ocamlpro/alt-ergo"
+       - "https://ocamlpro.com/fr/club-alt-ergo/"
+      description: "Alt-Ergo est un prouveur automatique de théorèmes, basé sur
+      la Satisfiabilité Modulo Théories (SMT). Cette famille de prouveurs a
+      fait des progrès impressionnants, et sont devenus très populaires dans
+      des domaines aussi variés que la conception de hardware, la vérification
+      de code et le test formel. Alt-Ergo se distingue dans ses deux derniers
+      domaines, grâce à son support inné du polymorphisme, sa compatibilité
+      avec le format SMT2 et plusieurs théories lui permettant de manipuler
+      formellement les types de base. Le Club Alt-Ergo rassemble un groupe
+      d’industriels (Thales, MERCE, Trust In Soft, Adacore, etc.) utilisant
+      Alt-Ergo dans leur activité et permet de financer l’évolution
+      d’Alt-Ergo."
+
+    - name: "SPARK"
+      url:
+        - "https://www.adacore.com/about-spark"
+      description: "Bientôt..."
+
+    - name: "TIS Analyzer"
+      url:
+        - "https://www.trust-in-soft.com/trustinsoft-analyzer"
+      description: "Bientôt..."
 ---

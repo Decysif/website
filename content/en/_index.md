@@ -94,4 +94,31 @@ collaborators:
 
 software:
   sectiontitle: "Our softwares"
+  tools:
+    - name: "Why3, une plateforme de vérification déductive de programmes."
+      url:
+        - "https://www.why3.org/"
+      description: "Soon..."
+
+    - name: "Creusot, le logiciel pour la vérification déductive de code Rust."
+      url:
+        - "https://github.com/creusot-rs/creusot"
+      description: "Soon..."
+
+    - name: "Alt-Ergo, le prouveur automatique pour la vérification de code."
+      url:
+       - "https://alt-ergo.ocamlpro.com"
+       - "https://github.com/ocamlpro/alt-ergo"
+       - "https://ocamlpro.com/fr/club-alt-ergo/"
+      description: "Soon..."
+
+    - name: "SPARK"
+      url:
+        - "https://www.adacore.com/about-spark"
+      description: "Soon..."
+
+    - name: "TIS Analyzer"
+      url:
+        - "https://www.trust-in-soft.com/trustinsoft-analyzer"
+      description: "Soon..."
 ---

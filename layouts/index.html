@@ -77,7 +77,27 @@
       </h2>
     </header>
     <div class="flex flex-column">
-      All softwares
+      {{ range $.Params.software.tools }}
+      <article class="center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+          <div class="tc center">
+            <h1 class="f4" id="{{ .name }}">{{ .name }}</h1>
+              <hr class="mw3 bb bw1 b--black-10">
+          </div>
+          <p class="lh-copy measure center f6 black-70 tj">
+              {{ .description | markdownify }}
+          </p>
+          <div class="tc center">
+              <hr class="mw3 bb bw1 b--black-10">
+              <ul class="list pl0">
+              {{ range .url }}
+                <li class="center">
+                  <a class="f6 link dim br3 ph3 pv2 mb2 dib white bg-gray" href="{{ . }}">{{ . }}</a>
+                </li>
+              {{ end }}
+              </ul>
+          </div>
+      </article>
+      {{ end }}
     </div>
   </article>
 </div>

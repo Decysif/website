@@ -2,7 +2,7 @@
 title: "DéCySif"
 sectiontitle: "Accueil"
 cascade:
-  featured_image: '/images/Decysif.png'
+  featured_image: 'images/Decysif.png'
 description: "La vérification formelle au service de la sécurité et la sûreté"
 synopsis: "DéCySif est un projet i-Demo régional de R&D regroupant Adacore,
 l'INRIA, OCamlPro et TrustInSoft. Il vise à améliorer la sécurité et la sûreté
@@ -26,6 +26,12 @@ project:
   <br />
   Le projet DéCySif vie l'amélioration de tous ces outils afin de converger vers
   une solution optimale pour la sécurité et la sûreté des systèmes critiques."
+  img:
+    src: "images/Organisation-outils.png"
+    alt: "Une image qui montre les liens entre les outils développés par les
+    acteurs du projet DéCySif. On voit au centre la platforme Why3 et, à
+    gauche, les langages utilisés (Creusot, SPARK, TIS Analyzer) et de l'autre
+    le prouveurs Alt-Ergo."
 
 coordinator:
   sectiontitle: "Coordinateur"

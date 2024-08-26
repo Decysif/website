@@ -25,7 +25,7 @@ Paginate = 10
       legal = "DéCySif is a project funded by the i-Démo call and the Ile-de-France region."
 
 [params]
-  site_logo = '/images/logo_decysif_excellence_for_security_blank_bg_rectangle.svg'
+  site_logo = 'images/logo_decysif_excellence_for_security_blank_bg_rectangle.svg'
   text_color = ""
   recent_posts_number = 5
 [params.contact]

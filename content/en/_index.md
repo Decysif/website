@@ -2,7 +2,7 @@
 title: "DéCySif"
 sectiontitle: "Home"
 cascade:
-  featured_image: '/images/Decysif.png'
+  featured_image: 'images/Decysif.png'
 description: "Formal verification in the service of safety and security"
 synopsis: "DéCySif is a regional R&D project funded by an i-Démo call and the
 Ile-de-France French region gathering Adacore, INRIA, OCamlPro and TrustInSoft.
@@ -28,6 +28,12 @@ project:
   Project DéCySif is the crucible for the improvement of all these tools and
   aims at guaranteeing convergence towards an optimal solution for the safety
   and security of embedded systems. "
+  img:
+    src: "images/Organisation-outils.png"
+    alt: "An image that shows the connections between the tools developed by
+    the actors of the DéCySif project. In the center, we see the Why3 platform,
+    and on the left side, the languages (Creusot, SPARK, TIS Analyzer) and the
+    Alt-Ergo prover on the right side."
 
 coordinator:
   sectiontitle: "Coordinator"

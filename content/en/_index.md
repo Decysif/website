@@ -2,7 +2,7 @@
 title: "DéCySif"
 sectiontitle: "Home"
 cascade:
-  featured_image: 'images/Decysif.png'
+  featured_image: '/images/Decysif.png'
 description: "Formal verification in the service of safety and security"
 synopsis: "DéCySif is a regional R&D project funded by an i-Démo call and the
 Ile-de-France French region gathering Adacore, INRIA, OCamlPro and TrustInSoft.
@@ -29,7 +29,6 @@ project:
   aims at guaranteeing convergence towards an optimal solution for the safety
   and security of embedded systems. "
   img:
-    src: "images/Organisation-outils.png"
     alt: "An image that shows the connections between the tools developed by
     the actors of the DéCySif project. In the center, we see the Why3 platform,
     and on the left side, the languages (Creusot, SPARK, TIS Analyzer) and the
@@ -101,27 +100,70 @@ collaborators:
 software:
   sectiontitle: "Our softwares"
   tools:
-    - name: "Why3, une plateforme de vérification déductive de programmes."
+    - name: "Why3, a platform for deductive program verification."
       url:
         - "https://www.why3.org/"
-      description: "Soon..."
+      description: "Why3 provides a rich language for specification and
+      programming, called WhyML, and relies on external theorem provers, both
+      automated and interactive, to validate verification conditions. Why3
+      comes with a standard library of logical theories (integer and real
+      arithmetic, boolean operations, sets, etc.) and basic programming data
+      structures (arrays, queues, hash tables, etc.). A user can write WhyML
+      programs directly and obtain correct-by-construction OCaml programs via
+      an automated extraction mechanism.
+      <br />
+      <br />
+      WhyML is also used as an intermediate language for the verification of C,
+      Ada, Rust, etc. programs. Why3 can be easily extended with support for
+      new theorem provers. Why3 can be used as a software library via an OCaml
+      API."
 
-    - name: "Creusot, le logiciel pour la vérification déductive de code Rust."
+    - name: "Creusot, software for deductive verification of Rust code."
       url:
         - "https://github.com/creusot-rs/creusot"
-      description: "Soon..."
+      description: "Creusot verifies that the code it is given to analyze is
+      free from risks of 'panic,' arithmetic overflow, or invalid assertions.
+      By adding annotations, one can go further and check that the code
+      conforms to a formal specification of its expected behavior.
+      <br />
+      <br />
+      Creusot works by translating Rust code into WhyML, the specification and
+      verification language of Why3. Users can then leverage the full power of
+      Why3 to semi-automatically discharge verification conditions."
 
-    - name: "Alt-Ergo, le prouveur automatique pour la vérification de code."
+    - name: "Alt-Ergo, the automatic prover for code verification."
       url:
        - "https://alt-ergo.ocamlpro.com"
        - "https://github.com/ocamlpro/alt-ergo"
        - "https://ocamlpro.com/fr/club-alt-ergo/"
-      description: "Soon..."
+      description: "Alt-Ergo is an automatic theorem prover, based on
+      Satisfiability Modulo Theories (SMT). This family of provers has made
+      impressive progress and has become very popular in fields as varied as
+      hardware design, code verification, and formal testing. Alt-Ergo stands
+      out in the latter two fields due to its inherent support for
+      polymorphism, its compatibility with the SMT2 format, and several
+      theories that allow it to formally handle basic types. The Alt-Ergo Club
+      brings together a group of industrials (Thales, MERCE, Trust In Soft,
+      Adacore, etc.) using Alt-Ergo in their activities and helps to fund the
+      evolution of Alt-Ergo."
 
-    - name: "SPARK"
+    - name: "SPARK, an industrial tool for deductive verification of the Ada language."
       url:
         - "https://www.adacore.com/about-spark"
-      description: "Soon..."
+        - "https://www.adacore.com/sparkpro"
+        - "https://docs.adacore.com/spark2014-docs/html/ug/"
+      description: "SPARK is both a language derived from the Ada language and
+      an analysis tool that allows for the verification of programs written in
+      this language. This tool enables the verification of the absence of
+      runtime errors as defined in the Reference Manual, as well as the
+      functional properties of subprograms expressed as contracts. SPARK relies
+      on Why3 and the WhyML language to generate and prove verification
+      conditions. Additionally, SPARK also distributes a library, SPARKlib,
+      which includes annotated containers, allowing their use in SPARK code, or
+      lemmas to facilitate the proof of programs using operations on
+      floating-point numbers. SPARK is used at an industrial level, notably for
+      cybersecurity issues by NVIDIA, or workstations implementing multiple
+      levels of security."    
 
     - name: "TIS Analyzer"
       url:

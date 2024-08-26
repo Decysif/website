@@ -28,7 +28,7 @@
       {{ .Params.project.content | markdownify}}
     </div>
     <figure>
-      <img src="{{ .Params.project.img.src }}" alt="{{ .Params.project.img.alt }}">
+      <img src="{{ "/images/Organisation-outils.png" | absURL }}" alt="{{ .Params.project.img.alt }}">
     </figure>
     <h3 class="f3" id="{{ replaceRE " " "" .Params.coordinator.sectiontitle }}">
       {{ .Params.coordinator.sectiontitle }}

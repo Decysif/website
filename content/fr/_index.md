@@ -2,7 +2,7 @@
 title: "DéCySif"
 sectiontitle: "Accueil"
 cascade:
-  featured_image: 'images/Decysif.png'
+  featured_image: '/images/Decysif.png'
 description: "La vérification formelle au service de la sécurité et la sûreté"
 synopsis: "DéCySif est un projet i-Demo régional de R&D regroupant Adacore,
 l'INRIA, OCamlPro et TrustInSoft. Il vise à améliorer la sécurité et la sûreté
@@ -27,11 +27,10 @@ project:
   Le projet DéCySif vie l'amélioration de tous ces outils afin de converger vers
   une solution optimale pour la sécurité et la sûreté des systèmes critiques."
   img:
-    src: "images/Organisation-outils.png"
     alt: "Une image qui montre les liens entre les outils développés par les
     acteurs du projet DéCySif. On voit au centre la platforme Why3 et, à
-    gauche, les langages utilisés (Creusot, SPARK, TIS Analyzer) et de l'autre
-    le prouveurs Alt-Ergo."
+    gauche, les langages et outils utilisés et de l'autre le prouveur
+    Alt-Ergo."
 
 coordinator:
   sectiontitle: "Coordinateur"
@@ -154,10 +153,24 @@ software:
       Alt-Ergo dans leur activité et permet de financer l’évolution
       d’Alt-Ergo."
 
-    - name: "SPARK"
+    - name: "SPARK, un outil industriel de vérification déductive pour le langage Ada."
       url:
         - "https://www.adacore.com/about-spark"
-      description: "Bientôt..."
+        - "https://www.adacore.com/sparkpro"
+        - "https://docs.adacore.com/spark2014-docs/html/ug/"
+      description: "SPARK est à la fois un langage dérivé du langage Ada et un
+      outil d'analyse permettant de vérifier des programmes écrits dans ce
+      langage. Cet outil permet de vérifier l'absence d'erreurs à l'exécution
+      comme définies dans le Manuel de Référence, mais également des propriétés
+      fonctionnelles des sous-programmes exprimées sous forme de contrats.
+      SPARK s'appuie sur Why3 et le langage WhyML pour générer et prouver les
+      conditions de vérification. Enfin, SPARK distribue également une
+      bibliothèque, SPARKlib, contenant entre autres des conteneurs annotés,
+      permettant leur utilisation dans du code SPARK, ou des lemmes permettant
+      de faciliter la preuve de programmes utilisant des opérations sur des
+      nombres à virgule flottante. SPARK est utilisé au niveau industriel,
+      notamment pour des problématiques de cybersécurité par NVIDIA, ou des
+      stations de travail multiniveau sécurisées par secunet."
 
     - name: "TIS Analyzer"
       url:

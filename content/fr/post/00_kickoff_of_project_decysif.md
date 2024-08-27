@@ -9,7 +9,7 @@ title: "Diagnostic de Cyber-Sécurité Formel: DéCySif"
 
 Ce mardi 19 décembre 2023, tous les partenaires du projet Decysif
 ([TrustInSoft](https://trust-in-soft.com/),
-[Adacore](https://www.adacore.com/), [OCamlPro](https://www.ocamlpro.com) et
+[AdaCore](https://www.adacore.com/), [OCamlPro](https://www.ocamlpro.com) et
 l’équipe [LMF](https://lmf.cnrs.fr/)) se sont réunis dans les locaux de
 TrustInSoft dans le 14ème arrondissement de Paris pour la réunion de lancement
 du projet !

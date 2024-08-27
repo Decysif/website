@@ -6,7 +6,8 @@ SectionPagesMenu = "main"
 
 theme = 'ananke'
 
-DefaultContentLanguage = "fr"
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = true
 
 Paginate = 10
 

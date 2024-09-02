@@ -172,11 +172,11 @@ collaborators:
     - name: "OCamlPro"
       url: "https://www.ocamlpro.com"
       description: 
-        "OCamlPro est un cabinet d'étude en R&D spécialisé dans les problèmes
+        "[OCamlPro](https://ocamlpro.com/) est un cabinet d'étude en R&D spécialisé dans les problèmes
         d'ingénieurie liés aux langages de programmation, aux spécificités métiers
         ou à la dette technique. La société est engagée dans l'*open source*
-        et contribue aux langages Rust, WebAssembly et OCaml. La société développe
-        aussi le prouveur SMT Alt-Ergo utilisé dans DéCySif.<br />
+        et contribue aux langages [Rust](https://red-iron.eu/), WebAssembly et OCaml. La société développe
+        aussi le [prouveur SMT Alt-Ergo](https://alt-ergo.ocamlpro.com/) utilisé dans DéCySif.<br />
         OCamlPro est également active dans le domaine de la certification
         Critères Communs au niveau EAL6 et l'utilisation des méthodes formelles
         (Coq, Lean4, Why3)."
@@ -185,7 +185,7 @@ collaborators:
     - name: "TrustInSoft"
       url: "https://trust-in-soft.com/"
       description: 
-        "TrustInSoft commercialise des outils et services d'analyse exhaustive de
+        "[TrustInSoft](https://www.trust-in-soft.com/) commercialise des outils et services d'analyse exhaustive de
         code source C et C++ permettant d'apporter des garanties mathématiques sur
         la qualité des logiciels de ses clients. Ces solutions d'analyses de
         logiciel permettent d'avoir des garanties sur la sécurité et la fiabilité

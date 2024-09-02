@@ -165,11 +165,11 @@ collaborators:
     - name: "OCamlPro"
       url: "https://www.ocamlpro.com"
       description:
-        "OCamlPro is an R&D consulting firm specializing in engineering problems
+        "[OCamlPro](https://ocamlpro.com/) is an R&D consulting firm specializing in engineering problems
         related to programming languages, business-specific requirements, or
         technical debt. The company is committed to open source and contributes to
-        the Rust, WebAssembly, and OCaml languages. The company also develops the
-        Alt-Ergo SMT solver used in DéCySif.<br />
+        the [Rust](https://red-iron.eu/), WebAssembly, and OCaml languages. The company also develops the
+        [Alt-Ergo SMT solver](https://alt-ergo.ocamlpro.com/) used in DéCySif.<br />
         OCamlPro is also active in the field of Common Criteria certification at
         the EAL6 level and the use of formal methods (Coq, Lean4, Why3)."
     

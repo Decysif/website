@@ -118,7 +118,20 @@ software:
     - name: "TIS Analyzer"
       url:
         - "https://www.trust-in-soft.com/trustinsoft-analyzer"
-      description: "Bientôt..."
+      description:
+        "TrustInSoft Analyzer est un analyseur statique de code C et C++. Il
+        comprend plusieurs techniques complémentaires d'analyses. La première
+        utilise l'interprétation abstraite pour vérifier l'absence de
+        comportements non-définis (undefined behavior (UB) en anglais) dans un
+        programme. Ces comportements non-définis peuvent mener à des runtime
+        errors et constituent une large part des failles de sécurité des
+        logiciels C et C++. Le deuxième niveau d'analyse permet, en plus de la
+        vérification de l'absence d'UB, de vérifier la validité de propriétés
+        fonctionnelles exprimées sous la forme de contrats de fonction et
+        d'assertions dans le code. Cette partie se fait en traduisant Why3 via
+        une traduction du code C/C++ en WhyML. Ces techniques d'analyses sont
+        utilisées industriellement et sont reconnues par l'agence américaine
+        fédérale National Institute of Standards and Technology (NIST)."
 
 collaborators:
   sectiontitle: "Le consortium"

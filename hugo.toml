@@ -1,27 +1,38 @@
 baseURL = 'https://decysif.fr'
-languageCode = 'fr'
 title = 'DéCySif'
 copyright = 'OCamlPro'
+SectionPagesMenu = "main"
 
 theme = 'ananke'
 
-DefaultContentLanguage = "fr"
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = true
+
+Paginate = 10
 
 [languages]
-
-[languages.fr]
-weight = 1
-[languages.fr.params]
-legal = "DéCySif est financé par l'appel à projet i-Démo et la région Ile-de-France."
-
-[languages.en]
-weight = 2
-disabled = true
-[languages.en.params]
-legal = "DéCySif is a project funded by the i-Démo call and the Ile-de-France region."
+  [languages.fr]
+    contentDir = "content/fr"
+    languageCode = 'fr'
+    weight = 1
+    [languages.fr.params]
+      legal = "DéCySif est financé par l'appel à projet i-Démo et la région Ile-de-France."
+  [languages.en]
+    contentDir = "content/en"
+    languageCode = 'en'
+    weight = 2
+    [languages.en.params]
+      legal = "DéCySif is a project funded by the i-Démo call and the Ile-de-France region."
 
 [params]
-text_color = ""
+  site_logo = 'images/logo_decysif_excellence_for_security_blank_bg_rectangle.svg'
+  text_color = ""
+  recent_posts_number = 5
 [params.contact]
-development = "https://formspree.io/f/mayreylq"
+  development = "https://formspree.io/f/mayreylq"
 
+# Helps display HTML inlined inside of frontmatter variables
+[markup.goldmark.renderer]
+  unsafe = true
+
+relativeURLs = true

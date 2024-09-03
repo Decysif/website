@@ -1,13 +1,13 @@
 ---
 title: Contact
-featured_image: ''
+cascade:
+  featured_image: '/images/Decysif.png'
 omit_header_text: true
-description: Laissez-nous un message!
+description: "Laissez-nous un message!"
 type: page
-menu: main
-# _build:
-#   list: never
-
+menu:
+  main:
+    weight: 4
 ---
 
 Pour nous contacter, merci de remplir le formulaire ci-dessous.

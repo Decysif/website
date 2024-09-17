@@ -26,6 +26,7 @@ Paginate = 10
 
 [params]
   site_logo = 'images/logo_decysif_excellence_for_security_blank_bg_rectangle.svg'
+  header_logo = 'images/logo_decysif_security_by_design_blank_bg_rectangle.svg'
   text_color = ""
   recent_posts_number = 5
 [params.contact]

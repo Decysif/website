@@ -3,11 +3,12 @@ title: "DéCySif"
 sectiontitle: "Home"
 cascade:
   featured_image: '/images/Decysif.png'
-description: "Formal verification in the service of safety and security"
+description: "**Formal verification in the service of safety and security**"
 synopsis: "DéCySif is a regional R&D project funded by an i-Démo call and the
 Ile-de-France French region gathering AdaCore, Inria, OCamlPro and TrustInSoft.
 Its objective is to improve the safety and security of critical systems using
-formal verification tools."
+formal verification tools.<br />The project began on **November 1st 2022**
+and will end on **November 1st 2027**."
 
 project:
   sectiontitle: "The project"
@@ -37,7 +38,7 @@ project:
 coordinator:
   sectiontitle: "Coordinator"
   content: "TrustInSoft are the coordinators of the project. For any enquiry,
-  please use the [contact form]({{< ref \"contact.en.md\" >}})."
+  please use the [contact form]({{< ref \"contact.md\" >}})."
 
 publications:
   - papername: "Formally Verified Rounding Errors of the Logarithm-Sum-Exponential Function"

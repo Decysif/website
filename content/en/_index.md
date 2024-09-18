@@ -40,10 +40,6 @@ coordinator:
   content: "TrustInSoft are the coordinators of the project. For any enquiry,
   please use the [contact form]({{< ref \"contact.md\" >}})."
 
-publications:
-  - papername: "Formally Verified Rounding Errors of the Logarithm-Sum-Exponential Function"
-    url: "https://inria.hal.science/hal-04674600"
-
 software:
   sectiontitle: "Our software"
   tools:

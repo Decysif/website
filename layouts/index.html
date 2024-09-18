@@ -1,123 +1,58 @@
 {{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
 {{ define "main" }}
 <div id="BEGIN:layouts/index.html"></div>
+<section class="ph4 pv5 bg-light-gray">
+  <div class="mw7 center">
+    <p class="f4 lh-copy">{{ .Params.synopsis | markdownify }}</p>
+  </div>
+</section>
 
-<!-- Home block -->
-<div class="flex-l mt2 mw8 center">
-  <article class="center cf pv5 ph3 ph4-ns mw7">
-      <h2 class="f2" id="{{ .Params.sectiontitle }}">
-        {{ .Params.sectiontitle }}
-      </h2>
-    <div class="nested-copy-line-height lh-copy f4 nested-links {{ $.Param "text_color" | default "mid-gray" }}">
-      {{ .Params.synopsis | markdownify }}
-    </div>
-    <br />
-    <hr class="mw6 bb bw1 b--black-10">
-  </article>
-</div>
+<section id="project" class="ph4 pv5 bg-near-white">
+  <div class="mw7 center">
+    <h2 class="f3" id="{{ replaceRE " " "" .Params.project.sectiontitle }}">{{ .Params.project.sectiontitle }}</h2>
+    <p class="f5 lh-copy">{{ .Params.project.content | markdownify }}</p>
+    <img src="../images/Organisation-outils.png" alt="{{ .Params.project.img.alt }}" class="db center w-60" />
+  </div>
+</section>
 
-<!-- Project block -->
-<div class="flex-l mt2 mw8 center">
-  <article class="center cf pv5 ph3 ph4-ns mw7">
-      <h2 class="f2" id="{{ replaceRE " " "" .Params.project.sectiontitle }}">
-        {{ .Params.project.sectiontitle }}
-      </h2>
-    <div class="nested-copy-line-height lh-copy f4 nested-links {{ $.Param "text_color" | default "mid-gray" }}">
-      {{ .Params.project.content | markdownify}}
-    </div>
-    <figure>
-      <img class="img" src="../images/Organisation-outils.png" alt="{{ .Params.project.img.alt }}">
-    </figure>
-    <h3 class="f3" id="{{ replaceRE " " "" .Params.coordinator.sectiontitle }}">
-      {{ .Params.coordinator.sectiontitle }}
-    </h3>
-    </header>
-    <div class="nested-copy-line-height lh-copy f4 nested-links {{ $.Param "text_color" | default "mid-gray" }}">
-      {{ .Params.coordinator.content | markdownify}}
-    </div>
-    <ul class="list pl0">
-      {{ if (eq .Site.Language.Lang "fr") }}
-      <h3 class="f4" id="publications">
-        Publications Scientifiques
-      </h3>
-      {{ else }}
-      <h3 class="f4" id="publications">
-        Scientific Papers
-      </h3>
-      {{ end }}
-      {{ range $.Params.publications }}
-      <li class="center">
-        <a class="f6 link dim br3 ph3 pv2 mb2 dib white bg-gray" href="{{ .url }}">{{ .papername }}</a>
-      </li>
-      {{ end }}
-    </ul>
-  </article>
-</div>
+<section id="coordinator" class="ph4 pv5 bg-light-gray">
+  <div class="mw7 center">
+    <h2 class="f3" id="{{ replaceRE " " "" .Params.coordinator.sectiontitle }}">{{ .Params.coordinator.sectiontitle }}</h2>
+    <p class="f5 lh-copy">{{ .Params.coordinator.content | markdownify }}</p>
+  </div>
+</section>
 
-<!-- Softwares block -->
-<div class="flex-l mt2 mw8 center">
-  <article class="center cf pv5 ph3 ph4-ns mw7">
-    <header>
-      <h2 class="f2" id="{{ replaceRE " " "" .Params.software.sectiontitle }}">
-        {{ .Params.software.sectiontitle }}
-      </h2>
-    </header>
-    <div class="flex flex-column">
-      {{ range $.Params.software.tools }}
-      <article class="center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
-          <div class="tc center">
-            <h3 class="f4" id="{{ .name }}">
-              {{ .name }}
-            </h3>
-            <hr class="mw3 bb bw1 b--black-10">
-          </div>
-          <p class="lh-copy measure center f6 black-70 tj">
-              {{ .description | markdownify }}
-          </p>
-          <div class="tc center">
-            <hr class="mw3 bb bw1 b--black-10">
-            <ul class="list pl0">
-            {{ range .url }}
-              <li class="center">
-                <a class="f6 link dim br3 ph3 pv2 mb2 dib white bg-gray" href="{{ . }}">{{ . }}</a>
-              </li>
-            {{ end }}
-            </ul>
-          </div>
-      </article>
+<section id="software" class="ph4 pv5 bg-near-white">
+  <div class="mw7 center">
+    <h2 class="f3" id="{{ replaceRE " " "" .Params.software.sectiontitle }}">{{ .Params.software.sectiontitle }}</h2>
+    <div class="flex flex-wrap">
+      {{ range .Params.software.tools }}
+        <div class="w-100 w-50-m w-50-l pa3">
+          <h3 class="f4">{{ .name }}</h3>
+          {{ range .url }}
+          <a href="{{ . }}" class="link underline blue">{{ . }}</a><br />
+          {{ end }}
+          <p class="f5 lh-copy">{{ .description | markdownify }}</p>
+        </div>
       {{ end }}
     </div>
-  </article>
-</div>
+  </div>
+</section>
 
-<!-- Consortium block -->
-<div class="flex-l mt2 mw8 center">
-  <article class="center cf pv5 ph3 ph4-ns mw7">
-    <header>
-      <h2 class="f2" id="{{ replaceRE " " "" .Params.collaborators.sectiontitle }}">
-        {{ .Params.collaborators.sectiontitle }}
-      </h2>
-    </header>
-    <div class="flex flex-column">
-      {{ range $.Params.collaborators.consortium }}
-      <article class="center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
-          <div class="tc center">
-            <h1 class="f4" id="{{ .name }}">{{ .name }}</h1>
-              <hr class="mw3 bb bw1 b--black-10">
-          </div>
-          <p class="lh-copy measure center f6 black-70 tj">
-              {{ .description | markdownify }}
-          </p>
-          <div class="tc center">
-              <hr class="mw3 bb bw1 b--black-10">
-              <a class="f6 link dim br3 ph3 pv2 mb2 dib white bg-gray" href="{{ .url }}">{{ .url }}</a>
-          </div>
-      </article>
+<section id="collaborators" class="ph4 pv5 bg-light-gray">
+  <div class="mw7 center">
+    <h2 class="f3" id="{{ replaceRE " " "" .Params.collaborators.sectiontitle }}">{{ .Params.collaborators.sectiontitle }}</h2>
+    <div class="flex flex-wrap">
+      {{ range .Params.collaborators.consortium }}
+        <div class="w-100 w-50-m w-50-l pa3">
+          <h3 class="f4">{{ .name }}</h3>
+          <a href="{{ .url }}" class="link underline blue">{{ .url }}</a>
+          <p class="f5 lh-copy">{{ .description | markdownify }}</p>
+        </div>
       {{ end }}
     </div>
-  </article>
-</div>
-
+  </div>
+</section>
 
 <div id="END:layouts/index.html"></div>
 {{ end }}

@@ -1,12 +1,151 @@
-p {
-    text-align: justify;
-    text-justify: auto;
+// Global header styles
+.site-header {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  // Default background color for headers without images
+  &.header-no-image {
+    background-color: #1a1a1a;
+    padding: 3rem 1rem;
+  }
+
+  // Cover style for headers with a background image
+  .header-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    // Ensure text is readable
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); // Adjust darkness here
+      z-index: 1;
+    }
+  }
+
+  // Header content wrapper (titles, etc.)
+  .header-content {
+    position: relative;
+    z-index: 2; // Ensure content is above the overlay
+    text-align: center;
+    padding: 2rem 1rem;
+
+    @media screen and (min-width: 48em) {
+      padding: 4rem 2rem;
+    }
+  }
+
+  // Main title (h1)
+  .header-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 48em) {
+      font-size: 3.5rem;
+    }
+
+    @media screen and (min-width: 64em) {
+      font-size: 4.5rem;
+    }
+  }
+
+  // Subtitle (h2)
+  .header-subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #eaeaea;
+    max-width: 40rem;
+    margin: 0 auto;
+
+    @media screen and (min-width: 48em) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (min-width: 64em) {
+      font-size: 1.75rem;
+    }
+  }
 }
 
-.pv5 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+// Responsive typography for better mobile experience
+h1, h2 {
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
+
+// Padding and spacing for different screen sizes
+@media screen and (min-width: 48em) {
+  .site-header {
+    padding: 6rem 3rem;
+  }
+
+  .header-content {
+    padding: 6rem 3rem;
+  }
+}
+
+
+section {
+  padding: 4rem 0;
+
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  img {
+    display: block;
+    margin: 2rem auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &.bg-light-gray {
+    background-color: #f4f4f4;
+  }
+
+  &.bg-near-white {
+    background-color: #fafafa;
+  }
+
+  a {
+    color: #007aff;
+    text-decoration: underline;
+
+    &:hover {
+      color: #0056b3;
+    }
+  }
+
+  .consortium {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      flex: 1 1 50%;
+      padding: 1rem;
+    }
+  }
+}
+
 
 #sitelogo {
     max-width: 15rem ;
@@ -14,4 +153,202 @@ p {
 
 #headerlogo {
     max-width: 25rem;
+}
+
+// Styling for the main deliverables and publications container
+.deliverables, .publications {
+  margin-top: 2rem;
+  padding: 0 1rem;
+
+  // Lots and publications containers
+  .lots, .publication-list {
+    margin-top: 2rem;
+
+    // Individual deliverables (papers) and publications
+    .paper, .publication {
+      background-color: #f9f9f9;
+      border: 1px solid #e2e2e2;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+
+      // Box shadow on hover for a subtle effect
+      &:hover {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-3px);
+      }
+
+      // Headings for each paper or publication
+      h5, h4 {
+        color: #0070f3;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+
+      // Synopsis and other smaller text elements
+      p {
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+
+        &.i {
+          font-style: italic;
+          color: #555;
+        }
+      }
+
+      // List of authors (styled as a neat bullet list)
+      ul {
+        margin-top: 0.5rem;
+        margin-bottom: 0.75rem;
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        color: #333;
+
+        li {
+          font-size: 0.95rem;
+          margin-bottom: 0.25rem;
+        }
+      }
+
+      // Links for PDF download or publication
+      a {
+        color: #0070f3;
+        font-weight: 500;
+        text-decoration: none;
+        border-bottom: 1px solid #0070f3;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: #0056b3;
+          border-color: #0056b3;
+        }
+      }
+    }
+  }
+}
+
+// Title and section headings
+h2, h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+// Title for lots and publications within each section
+h4, h5 {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+nav {
+  color: #fff;
+
+  .menu-toggle {
+    display: none;
+
+    @media (max-width: 64em) { // For medium and smaller screens
+      display: block;
+    }
+
+    button.hamburger-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      position: relative;
+
+      .hamburger-icon {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        position: relative;
+
+        &::before,
+        &::after {
+          content: '';
+          width: 30px;
+          height: 3px;
+          background-color: white;
+          position: absolute;
+          left: 0;
+          transition: all 0.3s ease;
+        }
+
+        &::before {
+          top: -10px;
+        }
+
+        &::after {
+          bottom: -10px;
+        }
+      }
+
+      &[aria-expanded="true"] .hamburger-icon {
+        background-color: transparent;
+
+        &::before {
+          transform: rotate(45deg);
+          top: 0;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @media (max-width: 64em) {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #333;
+      padding: 1rem 0;
+
+      li {
+        padding: 0.75rem 1.5rem;
+        text-align: center;
+
+        a {
+          width: 100%;
+          display: inline-block;
+        }
+      }
+
+      &[aria-expanded="true"] {
+        display: flex;
+      }
+    }
+
+    li {
+      margin: 0;
+
+      a {
+        text-decoration: none;
+        color: white;
+        padding: 0.75rem 1rem;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background-color: #444;
+        }
+      }
+    }
+  }
 }

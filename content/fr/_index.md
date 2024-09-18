@@ -37,10 +37,6 @@ coordinator:
   content: "La société TrustInSoft est le coordinateur du projet. Pour toute
   demande d'information, veuillez passer par le formulaire de [contact]({{< ref \"contact.md\" >}})."
 
-publications:
-  - papername: "Formally Verified Rounding Errors of the Logarithm-Sum-Exponential Function"
-    url: "https://inria.hal.science/hal-04674600"
-
 software:
   sectiontitle: "Les logiciels"
   tools:
@@ -193,4 +189,15 @@ collaborators:
         sont déployées dans le monde entier chez les développeurs et intégrateurs
         de composants logiciels issus des industries aéronautique, automobile,
         ferroviaire, militaire, nucléaire, télécoms, ou l'IoT."
+
+project_deliverables:
+  sectiontitle: "Deliverables"
+  deliverables:
+    - id: "L1.1"
+      name: "Surprisingly, turning it off and on again does work."
+      synopsys: "Science goes brrr"
+      leader: "Mrs. Science"
+      url: "lien vers github ?"
+    - ...
+
 ---

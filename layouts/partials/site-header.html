@@ -4,7 +4,7 @@
   <div class="header-cover bg-top" style="background-image: url('{{ $featured_image }}');">
     <div class="{{ .Site.Params.cover_dimming_class | default "bg-black-60" }}">
       {{ partial "site-navigation.html" .}}
-      <div class="header-content tc-l pv4 pv6-l ph3 ph4-ns">
+      <div class="header-content tc-l pv4 pv6-l ph3 ph4-ns center-content">
         <h1 class="header-title f2 f-subheadline-l fw2 white-90 mb0 lh-title">
           {{ .Title | default .Site.Title }}
         </h1>
@@ -19,7 +19,7 @@
   {{ else }}
   <div class="header-no-image {{ .Site.Params.background_color_class | default "bg-black" }}">
     {{ partial "site-navigation.html" . }}
-    <div class="header-content tc-l pv3 ph3 ph4-ns">
+    <div class="header-content tc-l pv3 ph3 ph4-ns center-content">
       <h1 class="header-title f2 f-subheadline-l fw2 light-silver mb0 lh-title">
         {{ .Title | default .Site.Title }}
       </h1>

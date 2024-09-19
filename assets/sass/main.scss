@@ -4,20 +4,18 @@
   width: 100%;
   position: relative;
   z-index: 1;
+  text-align: center; // Center content in headers
 
-  // Default background color for headers without images
-  &.header-no-image,
   &.page-header-no-image {
     background-color: #1a1a1a;
     padding: 3rem 1rem;
     display: flex;
     align-items: center;
-    justify-content: center; // Centers content horizontally
+    justify-content: center;
+    text-align: center;
   }
 
-  // Cover style for headers with a background image
-  .header-cover,
-  .page-cover {
+  &.page-cover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -25,9 +23,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center; // Center text
     position: relative;
 
-    // Ensure text is readable
     &::after {
       content: "";
       position: absolute;
@@ -35,23 +33,81 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.6); // Adjust darkness here
+      background-color: rgba(0, 0, 0, 0.6);
       z-index: 1;
     }
   }
 
-  // Header content wrapper (titles, etc.)
-  .header-content,
   .page-content {
     position: relative;
-    z-index: 2; // Ensure content is above the overlay
-    text-align: center;
+    z-index: 2;
     padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 
     @media screen and (min-width: 48em) {
       padding: 4rem 2rem;
     }
   }
+
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    @media screen and (min-width: 48em) {
+      font-size: 3.5rem;
+    }
+
+    @media screen and (min-width: 64em) {
+      font-size: 4.5rem;
+    }
+  }
+
+  .page-subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #eaeaea;
+    max-width: 40rem;
+    margin: 0 auto;
+    text-align: center;
+
+    @media screen and (min-width: 48em) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (min-width: 64em) {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+// Responsive typography for better mobile experience
+h1, h2 {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Adjust padding and spacing for different screen sizes
+@media screen and (min-width: 48em) {
+  .site-header,
+  .page-header {
+    padding: 6rem 3rem;
+  }
+
+  .header-content,
+  .page-content {
+    padding: 6rem 3rem;
+  }
+}
 
   // Main title (h1)
   .header-title,
@@ -61,6 +117,7 @@
     color: #fff;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    text-align: center;
 
     @media screen and (min-width: 48em) {
       font-size: 3.5rem;
@@ -79,6 +136,7 @@
     color: #eaeaea;
     max-width: 40rem;
     margin: 0 auto;
+    text-align: center;
 
     @media screen and (min-width: 48em) {
       font-size: 1.5rem;
@@ -88,7 +146,7 @@
       font-size: 1.75rem;
     }
   }
-}
+
 
 // Responsive typography for better mobile experience
 h1, h2 {
@@ -96,7 +154,13 @@ h1, h2 {
   margin-bottom: 1rem;
 }
 
-// Padding and spacing for different screen sizes
+// Ensure all images scale properly
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Adjust padding and spacing for different screen sizes
 @media screen and (min-width: 48em) {
   .site-header,
   .page-header {
@@ -108,6 +172,7 @@ h1, h2 {
     padding: 6rem 3rem;
   }
 }
+
 
 section {
   padding: 4rem 0;
@@ -260,143 +325,4 @@ h5 {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-}
-
-// Navbar container centering
-nav.navbar {
-  background-color: #000;
-  color: #fff;
-
-  .navbar-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; // Ensures logo and toggle are vertically aligned
-    padding: 0 1rem; // Add padding for spacing
-  }
-
-  .navbar-title {
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-
-  /* Mobile Menu Toggle (Hamburger) */
-  /* Mobile Menu Toggle (Hamburger) */
-.menu-toggle {
-  display: none; /* Hidden on larger screens */
-
-  @media (max-width: 64em) { // Mobile and smaller screens
-    display: block;
-    cursor: pointer;
-  }
-
-  button.hamburger-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    z-index: 1000; // Ensure it stays on top
-
-    .hamburger-icon {
-      width: 30px;
-      height: 3px;
-      background-color: white;
-      position: relative;
-      transition: background-color 0.3s ease;
-
-      &::before,
-      &::after {
-        content: '';
-        width: 30px;
-        height: 3px;
-        background-color: white;
-        position: absolute;
-        left: 0;
-        transition: all 0.3s ease;
-      }
-
-      &::before {
-        top: -10px;
-      }
-
-      &::after {
-        bottom: -10px;
-      }
-    }
-
-    &[aria-expanded="true"] .hamburger-icon {
-      background-color: transparent;
-
-      &::before {
-        transform: rotate(45deg);
-        top: 0;
-      }
-
-      &::after {
-        transform: rotate(-45deg);
-        bottom: 0;
-      }
-    }
-  }
-}
-
-/* Main Navigation Links */
-#main-navigation {
-  display: none; /* Hidden on smaller screens */
-
-  @media (min-width: 64em) { /* Show on larger screens */
-    display: flex;
-    flex-direction: row; /* Horizontal layout for larger screens */
-  }
-
-  ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .nav-item {
-    margin: 0;
-
-    a {
-      text-decoration: none;
-      color: white;
-      padding: 0.75rem 1rem;
-      transition: background-color 0.2s ease;
-
-      &:hover {
-        background-color: #444;
-      }
-    }
-  }
-
-  /* Mobile navigation when open */
-  &.open {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    width: 100%;
-    background-color: #000;
-    padding: 1rem 0;
-    position: absolute;
-    top: 50px; /* Position below the navbar */
-    left: 0;
-    z-index: 999; /* Ensure it stays on top */
-
-    .nav-item {
-      padding: 0.75rem 1.5rem;
-      text-align: center;
-
-      a {
-        width: 100%;
-        display: inline-block;
-      }
-    }
-  }
-}
 }

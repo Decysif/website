@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
   toggleButton.addEventListener('click', function() {
     const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
     toggleButton.setAttribute('aria-expanded', !isExpanded);
+
+    // Toggle the 'open' class to show/hide the navigation links
     mainNav.classList.toggle('open');
   });
 });

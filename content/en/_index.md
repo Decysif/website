@@ -11,6 +11,7 @@ formal verification tools.<br />The project began on **November 1st 2022**
 and will end on **November 1st 2027**."
 
 project:
+  navbartitle: "Project"
   sectiontitle: "The project"
   content: "It has been a few years since Rust has proven to be a viable
   alternative to languages such as Ada/C/C++ in the world of embedded software,
@@ -41,6 +42,7 @@ coordinator:
   please use the [contact form]({{< ref \"contact.md\" >}})."
 
 software:
+  navbartitle: "Software"
   sectiontitle: "Our software"
   tools:
     - name: "Why3, a platform for deductive program verification."
@@ -125,6 +127,7 @@ software:
         National Institute of Standards and Technology (NIST)."
 
 collaborators:
+  navbartitle: "Consortium"
   sectiontitle: "The consortium"
   consortium:
     - name: "AdaCore"

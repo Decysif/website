@@ -9,6 +9,7 @@ l'Inria, OCamlPro et TrustInSoft. Il vise à améliorer la sécurité et la sûr
 des systèmes critiques en utilisant des outils de vérification formelle.<br />Le projet prendra place du **1er Novembre 2022** au **1er Novembre 2027**."
 
 project:
+  navbartitle: "Project"
   sectiontitle: "Le projet"
   content: "Depuis quelques années, le langage de programmation Rust vient
   concurrencer les langages Ada/C/C++ établis dans le monde des logiciels
@@ -38,6 +39,7 @@ coordinator:
   demande d'information, veuillez passer par le formulaire de [contact]({{< ref \"contact.md\" >}})."
 
 software:
+  navbartitle: "Logiciels"
   sectiontitle: "Les logiciels"
   tools:
     - name: "Why3, une plateforme de vérification déductive de programmes."
@@ -130,6 +132,7 @@ software:
         fédérale National Institute of Standards and Technology (NIST)."
 
 collaborators:
+  navbartitle: "Consortium"
   sectiontitle: "Le consortium"
   consortium:
     - name: "AdaCore"
@@ -189,15 +192,4 @@ collaborators:
         sont déployées dans le monde entier chez les développeurs et intégrateurs
         de composants logiciels issus des industries aéronautique, automobile,
         ferroviaire, militaire, nucléaire, télécoms, ou l'IoT."
-
-project_deliverables:
-  sectiontitle: "Deliverables"
-  deliverables:
-    - id: "L1.1"
-      name: "Surprisingly, turning it off and on again does work."
-      synopsys: "Science goes brrr"
-      leader: "Mrs. Science"
-      url: "lien vers github ?"
-    - ...
-
 ---

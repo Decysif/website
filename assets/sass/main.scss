@@ -1,17 +1,23 @@
 // Global header styles
-.site-header {
+.site-header,
+.page-header {
   width: 100%;
   position: relative;
   z-index: 1;
 
   // Default background color for headers without images
-  &.header-no-image {
+  &.header-no-image,
+  &.page-header-no-image {
     background-color: #1a1a1a;
     padding: 3rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; // Centers content horizontally
   }
 
   // Cover style for headers with a background image
-  .header-cover {
+  .header-cover,
+  .page-cover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -35,7 +41,8 @@
   }
 
   // Header content wrapper (titles, etc.)
-  .header-content {
+  .header-content,
+  .page-content {
     position: relative;
     z-index: 2; // Ensure content is above the overlay
     text-align: center;
@@ -47,11 +54,13 @@
   }
 
   // Main title (h1)
-  .header-title {
+  .header-title,
+  .page-title {
     font-size: 2.5rem;
     font-weight: 700;
     color: #fff;
     text-transform: uppercase;
+    margin-bottom: 1rem;
 
     @media screen and (min-width: 48em) {
       font-size: 3.5rem;
@@ -63,7 +72,8 @@
   }
 
   // Subtitle (h2)
-  .header-subtitle {
+  .header-subtitle,
+  .page-subtitle {
     font-size: 1.25rem;
     font-weight: 300;
     color: #eaeaea;
@@ -88,15 +98,16 @@ h1, h2 {
 
 // Padding and spacing for different screen sizes
 @media screen and (min-width: 48em) {
-  .site-header {
+  .site-header,
+  .page-header {
     padding: 6rem 3rem;
   }
 
-  .header-content {
+  .header-content,
+  .page-content {
     padding: 6rem 3rem;
   }
 }
-
 
 section {
   padding: 4rem 0;
@@ -146,26 +157,28 @@ section {
   }
 }
 
-
 #sitelogo {
-    max-width: 15rem ;
+  max-width: 15rem;
 }
 
 #headerlogo {
-    max-width: 25rem;
+  max-width: 25rem;
 }
 
 // Styling for the main deliverables and publications container
-.deliverables, .publications {
+.deliverables,
+.publications {
   margin-top: 2rem;
   padding: 0 1rem;
 
   // Lots and publications containers
-  .lots, .publication-list {
+  .lots,
+  .publication-list {
     margin-top: 2rem;
 
     // Individual deliverables (papers) and publications
-    .paper, .publication {
+    .paper,
+    .publication {
       background-color: #f9f9f9;
       border: 1px solid #e2e2e2;
       padding: 1.5rem;
@@ -180,7 +193,8 @@ section {
       }
 
       // Headings for each paper or publication
-      h5, h4 {
+      h5,
+      h4 {
         color: #0070f3;
         font-size: 1.1rem;
         font-weight: 600;
@@ -231,7 +245,8 @@ section {
 }
 
 // Title and section headings
-h2, h3 {
+h2,
+h3 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #333;
@@ -239,116 +254,149 @@ h2, h3 {
 }
 
 // Title for lots and publications within each section
-h4, h5 {
+h4,
+h5 {
   color: #333;
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
 
-nav {
+// Navbar container centering
+nav.navbar {
+  background-color: #000;
   color: #fff;
 
-  .menu-toggle {
-    display: none;
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; // Ensures logo and toggle are vertically aligned
+    padding: 0 1rem; // Add padding for spacing
+  }
 
-    @media (max-width: 64em) { // For medium and smaller screens
-      display: block;
-    }
+  .navbar-title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
 
-    button.hamburger-button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
+  /* Mobile Menu Toggle (Hamburger) */
+  /* Mobile Menu Toggle (Hamburger) */
+.menu-toggle {
+  display: none; /* Hidden on larger screens */
+
+  @media (max-width: 64em) { // Mobile and smaller screens
+    display: block;
+    cursor: pointer;
+  }
+
+  button.hamburger-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 1000; // Ensure it stays on top
+
+    .hamburger-icon {
       width: 30px;
-      height: 30px;
+      height: 3px;
+      background-color: white;
       position: relative;
+      transition: background-color 0.3s ease;
 
-      .hamburger-icon {
-        display: block;
+      &::before,
+      &::after {
+        content: '';
         width: 30px;
         height: 3px;
         background-color: white;
-        position: relative;
-
-        &::before,
-        &::after {
-          content: '';
-          width: 30px;
-          height: 3px;
-          background-color: white;
-          position: absolute;
-          left: 0;
-          transition: all 0.3s ease;
-        }
-
-        &::before {
-          top: -10px;
-        }
-
-        &::after {
-          bottom: -10px;
-        }
+        position: absolute;
+        left: 0;
+        transition: all 0.3s ease;
       }
 
-      &[aria-expanded="true"] .hamburger-icon {
-        background-color: transparent;
+      &::before {
+        top: -10px;
+      }
 
-        &::before {
-          transform: rotate(45deg);
-          top: 0;
-        }
+      &::after {
+        bottom: -10px;
+      }
+    }
 
-        &::after {
-          transform: rotate(-45deg);
-          bottom: 0;
-        }
+    &[aria-expanded="true"] .hamburger-icon {
+      background-color: transparent;
+
+      &::before {
+        transform: rotate(45deg);
+        top: 0;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        bottom: 0;
       }
     }
   }
+}
 
-  .nav-links {
+/* Main Navigation Links */
+#main-navigation {
+  display: none; /* Hidden on smaller screens */
+
+  @media (min-width: 64em) { /* Show on larger screens */
+    display: flex;
+    flex-direction: row; /* Horizontal layout for larger screens */
+  }
+
+  ul {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
+  }
 
-    @media (max-width: 64em) {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background-color: #333;
-      padding: 1rem 0;
+  .nav-item {
+    margin: 0;
 
-      li {
-        padding: 0.75rem 1.5rem;
-        text-align: center;
+    a {
+      text-decoration: none;
+      color: white;
+      padding: 0.75rem 1rem;
+      transition: background-color 0.2s ease;
 
-        a {
-          width: 100%;
-          display: inline-block;
-        }
-      }
-
-      &[aria-expanded="true"] {
-        display: flex;
-      }
-    }
-
-    li {
-      margin: 0;
-
-      a {
-        text-decoration: none;
-        color: white;
-        padding: 0.75rem 1rem;
-        transition: background-color 0.2s ease;
-
-        &:hover {
-          background-color: #444;
-        }
+      &:hover {
+        background-color: #444;
       }
     }
   }
+
+  /* Mobile navigation when open */
+  &.open {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    width: 100%;
+    background-color: #000;
+    padding: 1rem 0;
+    position: absolute;
+    top: 50px; /* Position below the navbar */
+    left: 0;
+    z-index: 999; /* Ensure it stays on top */
+
+    .nav-item {
+      padding: 0.75rem 1.5rem;
+      text-align: center;
+
+      a {
+        width: 100%;
+        display: inline-block;
+      }
+    }
+  }
+}
 }

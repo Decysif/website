@@ -16,70 +16,72 @@ nav.navbar {
     text-decoration: none;
   }
 
+  // Hamburger menu styles
   .menu-toggle {
-  display: none;
+    display: none;
 
-  @media (max-width: 64em) { // Show hamburger on small screens
-    display: block;
-    cursor: pointer;
-  }
+    @media (max-width: 64em) { // Show hamburger on smaller screens
+      display: block;
+      cursor: pointer;
+    }
 
-  button.hamburger-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    width: 30px;
-    height: 24px; // Adjust the height to fit the three bars
-    position: relative;
-    z-index: 1000; // Ensure it's clickable
-
-    .hamburger-icon {
+    button.hamburger-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
       width: 30px;
-      height: 3px;
-      background-color: white;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%); // This centers the middle bar vertically
-      transition: background-color 0.3s ease;
+      height: 24px;
+      position: relative;
+      z-index: 1000;
 
-      &::before,
-      &::after {
-        content: '';
+      .hamburger-icon {
         width: 30px;
         height: 3px;
         background-color: white;
         position: absolute;
+        top: 50%;
         left: 0;
-        transition: all 0.3s ease;
+        transform: translateY(-50%);
+        transition: background-color 0.3s ease;
+
+        &::before,
+        &::after {
+          content: '';
+          width: 30px;
+          height: 3px;
+          background-color: white;
+          position: absolute;
+          left: 0;
+          transition: all 0.3s ease;
+        }
+
+        &::before {
+          top: -8px; // Top bar
+        }
+
+        &::after {
+          top: 8px; // Bottom bar
+        }
       }
 
-      &::before {
-        top: -8px; // Top bar
-      }
+      &[aria-expanded="true"] .hamburger-icon {
+        background-color: transparent;
 
-      &::after {
-        top: 8px; // Bottom bar
-      }
-    }
+        &::before {
+          transform: rotate(45deg);
+          top: 0;
+        }
 
-    &[aria-expanded="true"] .hamburger-icon {
-      background-color: transparent;
-
-      &::before {
-        transform: rotate(45deg);
-        top: 0;
-      }
-
-      &::after {
-        transform: rotate(-45deg);
-        top: 0;
+        &::after {
+          transform: rotate(-45deg);
+          top: 0;
+        }
       }
     }
   }
-}
 
+  // Mobile navigation styles
   .nav-links {
     display: flex;
     align-items: center;
@@ -108,59 +110,64 @@ nav.navbar {
     }
   }
 
-  // Hamburger menu for small screens
+  // Hamburger menu for mobile
   @media screen and (max-width: 992px) {
-    .menu-toggle {
-      display: block;
-    }
-
     .nav-links {
-      display: none;
+      display: none; // Hidden by default
     }
 
-    #main-navigation {
-  display: none; // Hide by default on mobile
+    #main-navigation.open {
+      display: flex;
+      flex-direction: column; // Stack items vertically on mobile
+      width: 100%;
+      background-color: #000;
+      padding: 1rem 0;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      z-index: 999;
+    }
 
-  @media (min-width: 64em) { // Show on larger screens
-    display: flex;
-    flex-direction: row;
-  }
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
-  &.open {
-    display: flex;
-    flex-direction: column; // Stack items vertically for mobile
-    width: 100%;
-    background-color: #000;
-    padding: 1rem 0;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    z-index: 999;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: column; // Stack items vertically on mobile
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .nav-item {
-    margin: 0;
-
-    a {
-      text-decoration: none;
-      color: white;
+    .nav-item {
       padding: 0.75rem 1rem;
-      transition: background-color 0.2s ease;
+      margin: 0;
+      width: 100%;
+      text-align: center; // Ensure the items are centered
 
-      &:hover {
-        background-color: #444;
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        font-weight: 400;
+        display: block; // Make the link take up the full width
+        width: 100%;
+        padding: 0.75rem 0;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          background-color: #444;
+        }
       }
     }
   }
-}
 
+  // Adjustments for larger screens
+  @media (min-width: 992px) {
+    .nav-links {
+      display: flex;
+    }
+
+    #main-navigation {
+      display: flex;
+      flex-direction: row;
+    }
   }
 }

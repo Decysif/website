@@ -227,7 +227,9 @@ section {
 }
 
 #headerlogo {
-  max-width: 25rem;
+  justify-self: center; /* Center the logo in the middle column */
+  max-width: 50%;
+  height: auto;
 }
 
 // Styling for the main deliverables and publications container

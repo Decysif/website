@@ -17,7 +17,7 @@
       {{ end }}
     </h3>
     <a href="{{ .Params.project_deliverables.repository }}" class="link dim blue f6 underline db tc mb3" target="_blank">
-      {{ if (eq .Site.Language.Lang "fr") }}
+      {{ if (eq .Lang "fr") }}
         Dépôt
       {{ else }}
         Repository
@@ -25,47 +25,48 @@
     </a>
 
     <div class="lots mt4">
-      {{ range .Params.project_deliverables.lots }}
+    {{ $parent := . }} <!-- Save the parent context -->
+    {{ range .Params.project_deliverables.lots }}
       <div class="lot mv4">
         <h4 class="f5 fw6 ttu dark-gray tc">{{ .lot }}</h4>
         <div class="papers">
           {{ range .papers }}
-          <div class="paper ba b--light-gray pa3 mb3 br2">
-            <h5 class="f6 fw6 dark-blue">{{ .id }} - {{ .name }}</h5>
-            <p class="f6">{{ .synopsys }}</p>
-            <p class="f6 i">
-              {{ if (eq .Site.Language.Lang "fr") }}
-                Dirigé par: {{ .leader }}
-              {{ else }}
-                Led by: {{ .leader }}
-              {{ end }}
-            </p>
-            <p class="f6">
-              {{ if (eq .Site.Language.Lang "fr") }}
-                Auteurs:
-              {{ else }}
-                Authors:
-              {{ end }}
-            </p>
-            <ul class="list pl0">
-              {{ range .authors }}
-              <li class="f6">{{ . }}</li>
-              {{ end }}
-            </ul>
-            <a href="{{ .pdf_url }}" class="link dim blue underline f6 fw5" target="_blank">
-              {{ if (eq .Site.Language.Lang "fr") }}
-                Télécharger la version PDF
-              {{ else }}
-                Download PDF version (French)
-              {{ end }}
-            </a>
-          </div>
+            <div class="paper ba b--light-gray pa3 mb3 br2">
+              <h5 class="f6 fw6 dark-blue">{{ .id }} - {{ .name }}</h5>
+              <p class="f6">{{ .synopsys }}</p>
+              <p class="f6 i">
+                {{ if eq $parent.Lang "fr" }} <!-- Use the parent context -->
+                  Dirigé par: {{ .leader }}
+                {{ else }}
+                  Led by: {{ .leader }}
+                {{ end }}
+              </p>
+              <p class="f6">
+                {{ if eq $parent.Lang "fr" }} <!-- Use the parent context -->
+                  Auteurs:
+                {{ else }}
+                  Authors:
+                {{ end }}
+              </p>
+              <ul class="list pl0">
+                {{ range .authors }}
+                  <li class="f6">{{ . }}</li>
+                {{ end }}
+              </ul>
+              <a href="{{ .pdf_url }}" class="link dim blue underline f6 fw5" target="_blank">
+                {{ if eq $parent.Site.Language.Lang "fr" }}
+                  Télécharger la version PDF
+                {{ else }}
+                  Download PDF version (French)
+                {{ end }}
+              </a>
+            </div>
           {{ end }}
         </div>
       </div>
-      {{ end }}
-    </div>
+    {{ end }}
   </div>
+</div>
 
   <!-- Publications Section -->
   <div class="publications mt5 mw8 center">
@@ -74,18 +75,19 @@
     </h3>
 
     <div class="publication-list">
+      {{ $parent := . }}
       {{ range .Params.publications }}
       <div class="publication ba b--light-gray pa3 mb3 br2">
         <h4 class="f5 fw6 dark-blue">{{ .papername }}</h4>
         <p class="f6">
-          {{ if (eq .Site.Language.Lang "fr") }}
+          {{ if eq $parent.Lang "fr" }}
             Publié: {{ .date }}
           {{ else }}
             Published: {{ .date }}
           {{ end }}
         </p>
         <p class="f6">
-          {{ if (eq .Site.Language.Lang "fr") }}
+          {{ if eq $parent.Lang "fr" }}
             Auteurs:
           {{ else }}
             Authors:
@@ -97,7 +99,7 @@
           {{ end }}
         </ul>
         <a href="{{ .url }}" class="link dim blue underline f6 fw5" target="_blank">
-          {{ if (eq .Site.Language.Lang "fr") }}
+          {{ if eq $parent.Lang "fr" }}
             Lire la publication
           {{ else }}
             Read Publication

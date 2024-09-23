@@ -44,7 +44,7 @@ publications:
     url: "https://inria.hal.science/hal-04674600"
 
 software:
-  sectiontitle: "Our softwares"
+  sectiontitle: "Our software"
   tools:
     - name: "Why3, a platform for deductive program verification."
       url:

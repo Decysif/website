@@ -33,7 +33,7 @@
           {{ range .papers }}
             <div class="paper ba b--light-gray pa3 mb3 br2">
               <h5 class="f6 fw6 dark-blue">{{ .id }} - {{ .name }}</h5>
-              <p class="f6">{{ .synopsys }}</p>
+              <p class="f6">Abstract: {{ .synopsys }}</p>
               <p class="f6 i">
                 {{ if eq $parent.Lang "fr" }} <!-- Use the parent context -->
                   Dirigé par: {{ .leader }}

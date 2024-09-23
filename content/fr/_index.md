@@ -6,7 +6,8 @@ cascade:
 description: "La vérification formelle au service de la sécurité et la sûreté"
 synopsis: "DéCySif est un projet i-Demo régional de R&D regroupant AdaCore,
 l'Inria, OCamlPro et TrustInSoft. Il vise à améliorer la sécurité et la sûreté
-des systèmes critiques en utilisant des outils de vérification formelle."
+des systèmes critiques en utilisant des outils de vérification formelle. 
+C'est le projet le plus ambitieux de ces dernières années sur la thématique de la vérification dans le domaine de la cybersécurité."
 
 project:
   sectiontitle: "Le projet"

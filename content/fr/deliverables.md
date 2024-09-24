@@ -20,7 +20,7 @@ project_deliverables:
           pdf_url: "/pdf/livrable_l1_1.pdf"
         - id: "L2.1"
           name: "Constitution d’une base de fichiers d’entrée représentatifs des difficultés rencontrées pour la preuve automatique."
-          synopsys: "Bientôt"
+          synopsys: "Ce livrable est constitué d’une base de tests qui se trouve dans le dépôt ’benchmarks’ du projet Décysif, dont les objectifs sont de repérer les faiblesses du prouveur Alt-Ergo, de repérer les problèmes de traduction (ou repérer des problèmes au niveau de l’écriture des théories, par exemple le modèle mémoire de J3) pour tous les prouveurs CVC5, CVC4, Z3, Alt-Ergo.
           leader: "AdaCore"
           authors:
             - "Yannick Moy (AdaCore)"

@@ -10,7 +10,7 @@ project_deliverables:
       papers:
         - id: "L1.1"
           name: "Constitution d’une base de fichiers d’entrée représentatifs des difficultés rencontrées pour générer des exploits."
-          synopsys: "Bientôt"
+          synopsys: "Ce livrable est constitué d’une base de tests qui se trouve dans le dépôt ’benchmarks’ du projet Décysif. Les objectifs du livrable sont d'identifier des faiblesses lors de la reconstruction d’un contre-exemple par Why3 depuis les modèles des solveurs SMT, ou les faiblesses des procédures de vérification et de catégorisation des contre-exemples."
           leader: "TrustInSoft"
           authors:
             - "Guillaume Cluzel (TrustInSoft)"

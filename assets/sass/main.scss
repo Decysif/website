@@ -1,13 +1,251 @@
-p {
-    text-align: justify;
-    text-justify: auto;
+// Global header styles
+.site-header,
+.page-header {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+
+  // Remove text-align overrides in case flexbox conflicts exist
+  &.page-header-no-image {
+    background-color: #1a1a1a;
+    padding: 3rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &.page-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+  }
+
+  .page-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Ensure content (logo) stays centered */
+    align-items: center;
+    flex-direction: column; /* Stack content vertically */
+
+    @media screen and (min-width: 48em) {
+      padding: 4rem 2rem;
+    }
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    @media screen and (min-width: 48em) {
+      font-size: 3.5rem;
+    }
+
+    @media screen and (min-width: 64em) {
+      font-size: 4.5rem;
+    }
+  }
+
+  .page-subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #eaeaea;
+    max-width: 40rem;
+    margin: 0 auto;
+    text-align: center;
+
+    @media screen and (min-width: 48em) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (min-width: 64em) {
+      font-size: 1.75rem;
+    }
+  }
 }
 
-.pv5 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+.tc-l {
+  text-align: center;
+}
+// Centering the header logo
+#headerlogo {
+  display: block;
+  margin: 0 auto; /* Center the logo horizontally */
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  height: auto;
+  padding: 1rem; /* Adjust padding to prevent any content overflow */
+
+  /* Force centering at specific breakpoints */
+  @media screen and (max-width: 960px) {
+    max-width: 75%; /* Adjust width for smaller screens */
+  }
+
+  @media screen and (max-width: 480px) {
+    max-width: 60%; /* Further reduce the logo size on very small screens */
+  }
 }
 
-#sitelogo {
-    max-width: 15rem ;
+
+// Flexbox centering for headers
+.site-header,
+.page-header {
+  display: flex;
+  flex-direction: column; /* Stack the content vertically */
+  justify-content: center; /* Vertically center the content */
+  align-items: center; /* Horizontally center the content */
+
+  .header-content,
+  .page-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Keep everything in the center */
+    align-items: center;
+    text-align: center; /* Ensure text is also centered */
+  }
+
+  @media screen and (min-width: 48em) {
+    padding: 6rem 3rem;
+  }
+}
+
+img {
+  max-width: 100%;
+  text-align: center;
+  height: auto;
+}
+
+// Adjust padding and spacing for different screen sizes
+@media screen and (min-width: 48em) {
+  .site-header,
+  .page-header {
+    padding: 6rem 3rem;
+  }
+
+  .header-content,
+  .page-content {
+    padding: 6rem 3rem;
+  }
+}
+
+// Styling for the main deliverables and publications container
+.deliverables,
+.publications {
+  margin-top: 2rem;
+  padding: 0 1rem;
+
+  // Lots and publications containers
+  .lots,
+  .publication-list {
+    margin-top: 2rem;
+
+    // Individual deliverables (papers) and publications
+    .paper,
+    .publication {
+      background-color: #f9f9f9;
+      border: 1px solid #e2e2e2;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+
+      // Box shadow on hover for a subtle effect
+      &:hover {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-3px);
+      }
+
+      // Headings for each paper or publication
+      h5,
+      h4 {
+        color: #0070f3;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+
+      // Synopsis and other smaller text elements
+      p {
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+
+        &.i {
+          font-style: italic;
+          color: #555;
+        }
+      }
+
+      // List of authors (styled as a neat bullet list)
+      ul {
+        margin-top: 0.5rem;
+        margin-bottom: 0.75rem;
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        color: #333;
+
+        li {
+          font-size: 0.95rem;
+          margin-bottom: 0.25rem;
+        }
+      }
+
+      // Links for PDF download or publication
+      a {
+        color: #0070f3;
+        font-weight: 500;
+        text-decoration: none;
+        border-bottom: 1px solid #0070f3;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: #0056b3;
+          border-color: #0056b3;
+        }
+      }
+    }
+  }
+}
+
+// Title and section headings
+h2,
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+// Title for lots and publications within each section
+h4,
+h5 {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
 }

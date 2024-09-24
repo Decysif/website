@@ -13,19 +13,22 @@ Paginate = 10
 [languages]
   [languages.fr]
     contentDir = "content/fr"
-    languageCode = 'fr'
+    languageCode = "fr"
+    languageName = "Français"
     weight = 1
     [languages.fr.params]
       legal = "DéCySif est financé par l'appel à projet i-Démo et la région Ile-de-France."
   [languages.en]
     contentDir = "content/en"
-    languageCode = 'en'
+    languageCode = "en"
+    languageName = "English"
     weight = 2
     [languages.en.params]
       legal = "DéCySif is a project funded by the i-Démo call and the Ile-de-France region."
 
 [params]
   site_logo = 'images/logo_decysif_excellence_for_security_blank_bg_rectangle.svg'
+  header_logo = 'images/logo_decysif_security_by_design_blank_bg_rectangle.svg'
   text_color = ""
   recent_posts_number = 5
 [params.contact]

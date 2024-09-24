@@ -6,4 +6,6 @@
     <div class="center f5 fw5 hover-white no-underline white-70 dn dib-ns pv2 ph3">{{ .Site.Param "legal" }}</div>
     <div>{{ partial "social-follow.html" . }}</div>
   </div>
+  {{ $hamburgerJS := resources.Get "js/hamburger.js" | minify | fingerprint }}
+  <script src="{{ $hamburgerJS.RelPermalink }}" integrity="{{ $hamburgerJS.Data.Integrity }}"></script>
 </footer>

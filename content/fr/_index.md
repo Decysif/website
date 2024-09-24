@@ -3,12 +3,13 @@ title: "DéCySif"
 sectiontitle: "Accueil"
 cascade:
   featured_image: '/images/Decysif.png'
-description: "La vérification formelle au service de la sécurité et la sûreté"
+description: "**La vérification formelle au service de la sécurité et la sûreté**"
 synopsis: "DéCySif est un projet i-Demo régional de R&D regroupant AdaCore,
 l'Inria, OCamlPro et TrustInSoft. Il vise à améliorer la sécurité et la sûreté
-des systèmes critiques en utilisant des outils de vérification formelle."
+des systèmes critiques en utilisant des outils de vérification formelle.<br />Le projet prendra place du **1er Novembre 2022** au **1er Novembre 2027**."
 
 project:
+  navbartitle: "Project"
   sectiontitle: "Le projet"
   content: "Depuis quelques années, le langage de programmation Rust vient
   concurrencer les langages Ada/C/C++ établis dans le monde des logiciels
@@ -35,13 +36,10 @@ project:
 coordinator:
   sectiontitle: "Coordinateur"
   content: "La société TrustInSoft est le coordinateur du projet. Pour toute
-  demande d'information, veuillez passer par le formulaire de [contact]({{< ref \"contact.fr.md\" >}})."
-
-publications:
-  - papername: "Formally Verified Rounding Errors of the Logarithm-Sum-Exponential Function"
-    url: "https://inria.hal.science/hal-04674600"
+  demande d'information, veuillez passer par le formulaire de [contact]({{< ref \"contact.md\" >}})."
 
 software:
+  navbartitle: "Logiciels"
   sectiontitle: "Les logiciels"
   tools:
     - name: "Why3, une plateforme de vérification déductive de programmes."
@@ -134,6 +132,7 @@ software:
         fédérale National Institute of Standards and Technology (NIST)."
 
 collaborators:
+  navbartitle: "Consortium"
   sectiontitle: "Le consortium"
   consortium:
     - name: "AdaCore"

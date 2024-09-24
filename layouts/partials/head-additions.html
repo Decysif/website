@@ -1,5 +1,9 @@
-  <meta property="og:image" content="/images/logo_decysif_excellence_for_security_black.svg"/>
+<meta property="og:image" content="/images/logo_decysif_excellence_for_security_black.svg"/>
 {{ $opts := dict "transpiler" "libsass" "targetPath" "css/style.css" }}
 {{ with resources.Get "sass/main.scss" | toCSS $opts | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+ <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+{{ end }}
+{{ $opts := dict "transpiler" "libsass" "targetPath" "css/navigation.css" }}
+{{ with resources.Get "sass/navigation.scss" | toCSS $opts | minify | fingerprint }}
+ <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
 {{ end }}

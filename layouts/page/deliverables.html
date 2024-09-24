@@ -33,19 +33,19 @@
           {{ range .papers }}
             <div class="paper ba b--light-gray pa3 mb3 br2">
               <h5 class="f6 fw6 dark-blue">{{ .id }} - {{ .name }}</h5>
-              <p class="f6">Abstract: {{ .synopsys }}</p>
+              <p class="f6"><strong>Abstract:</strong> {{ .synopsys }}</p>
               <p class="f6 i">
                 {{ if eq $parent.Lang "fr" }} <!-- Use the parent context -->
-                  Dirigé par: {{ .leader }}
+                <strong>Dirigé par:</strong> {{ .leader }}
                 {{ else }}
-                  Led by: {{ .leader }}
+                <strong>Led by:</strong> {{ .leader }}
                 {{ end }}
               </p>
               <p class="f6">
                 {{ if eq $parent.Lang "fr" }} <!-- Use the parent context -->
-                  Auteurs:
+                <strong>Auteurs:</strong>
                 {{ else }}
-                  Authors:
+                <strong>Authors:</strong>
                 {{ end }}
               </p>
               <ul class="list pl0">
@@ -81,16 +81,16 @@
         <h4 class="f5 fw6 dark-blue">{{ .papername }}</h4>
         <p class="f6">
           {{ if eq $parent.Lang "fr" }}
-            Publié: {{ .date }}
+          <strong>Publié:</strong> {{ .date }}
           {{ else }}
-            Published: {{ .date }}
+          <strong>Published:</strong> {{ .date }}
           {{ end }}
         </p>
         <p class="f6">
           {{ if eq $parent.Lang "fr" }}
-            Auteurs:
+          <strong>Auteurs:</strong>
           {{ else }}
-            Authors:
+          <strong>Authors:</strong>
           {{ end }}
         </p>
         <ul class="list pl0">

@@ -9,10 +9,11 @@ title: "Sortie d'Alt-Ergo 2.6 : Renforcer la vérification formelle avec de nouv
 
 Nous sommes ravis d'annoncer la sortie officielle d'**Alt-Ergo 2.6** !
 
-Alt-Ergo est un prouveur SMT automatique développé par
-[OCamlPro](https://ocamlpro.com/), largement utilisé en vérification formelle,
-jouant un rôle clé dans les cadres d'analyse statique tels que le [TIS
-Analyzer](https://www.trust-in-soft.com/trustinsoft-analyzer) et
+[Alt-Ergo](https://alt-ergo.ocamlpro.com/) est un démonstrateur automatisé
+développé par [OCamlPro](https://ocamlpro.com/), largement utilisé en
+vérification formelle. Il joue un rôle clé dans les cadres d'analyse statique
+tels que le [TIS Analyzer](https://www.trust-in-soft.com/trustinsoft-analyzer),
+[SPARK](https://www.adacore.com/about-spark) et
 [Frama-C](https://frama-c.com/).
 
 Cette nouvelle version introduit une série d'améliorations et de nouvelles
@@ -20,19 +21,18 @@ fonctionnalités, en particulier dans le raisonnement sur les bit-vectors, la
 génération de modèles et l'optimisation.
 
 Les mises à jour d'Alt-Ergo 2.6 sont directement liées aux avancées réalisées
-dans le cadre du projet de recherche conjoint **DéCySif** entre
-[AdaCore](https://www.adacore.com/),
-[Inria](https://www.inria.fr/en/toccata), [OCamlPro](https://ocamlpro.com/) et
+dans le cadre du projet de recherche **DéCySif** qui réunit
+[AdaCore](https://www.adacore.com/), [Inria](https://www.inria.fr/en/toccata),
+[OCamlPro](https://ocamlpro.com/) et
 [TrustInSoft](https://www.trust-in-soft.com/).
 
 ### Quoi de neuf ?
 
-- Un support amélioré pour les **bit-vectors** et les **types de données
-  algébriques**.
-- De nouvelles **capacités d'optimisation** pour guider le comportement du
+- Support amélioré des **bit-vectors** et des **types de données algébriques**.
+- Nouvelles **capacités d'optimisation** pour guider le comportement du
   démonstrateur.
-- La **génération de modèles** pour un éventail plus large de théories, y
-  compris les bit-vectors.
+- **Génération de modèles** pour un éventail plus large de théories, y compris
+  les bit-vectors.
 
 Ces améliorations sont particulièrement utiles pour ceux qui travaillent sur la
 vérification de code bas-niveau, la cryptographie ou le débogage de systèmes

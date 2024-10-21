@@ -9,10 +9,11 @@ title: "Alt-Ergo 2.6 Release: Boosting Formal Verification with New Features"
 
 We are thrilled to share that **Alt-Ergo 2.6** has officially been released!
 
-Alt-Ergo is an automated prover developped by [OCamlPro](https://ocamlpro.com/)
-widely used in formal verification and plays a key role in static analysis
-frameworks like the [TIS
-Analyzer](https://www.trust-in-soft.com/trustinsoft-analyzer) and
+[Alt-Ergo](https://alt-ergo.ocamlpro.com/) is an automated prover developped by
+[OCamlPro](https://ocamlpro.com/) widely used in formal verification, it plays
+a key role in static analysis frameworks like the [TIS
+Analyzer](https://www.trust-in-soft.com/trustinsoft-analyzer),
+[SPARK](https://www.adacore.com/about-spark") and
 [Frama-C](https://frama-c.com/).
 
 This latest version introduces a series of improvements and new features,
@@ -20,7 +21,7 @@ particularly in bit-vector reasoning, model generation, and optimization.
 
 The updates in Alt-Ergo 2.6 are directly tied to the progress made in the
 **DéCySif** joint research project between [AdaCore](https://www.adacore.com/),
-[Inria](https://www.inria.fr/en/toccata), OCamlPro, and
+[Inria](https://www.inria.fr/en/toccata), [OCamlPro](https://ocamlpro.com/), and
 [TrustInSoft](https://www.trust-in-soft.com/).
 
 ### What's New?

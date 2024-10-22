@@ -8,13 +8,12 @@
     <!-- Hamburger menu for mobile -->
     <div class="menu-toggle">
       <button id="menu-button" class="hamburger-button" aria-expanded="false" aria-controls="main-navigation">
-        <span class="hamburger-icon"></span> <!-- This is where the three lines are styled -->
+        <span class="hamburger-icon"></span>
       </button>
     </div>
 
     <!-- Navigation Links -->
     <div id="main-navigation" class="nav-links flex-l items-center dn db-l">
-      {{ partial "i18nlist.html" . }}
       {{ with .Site.GetPage "_index.md"  }}
       <ul class="flex-l {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">
         <li class="nav-item {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
@@ -51,6 +50,13 @@
         <li class="nav-item {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
           <a class="hover-white no-underline white-90" href="{{ .RelPermalink }}" title="{{ i18n "pageTitle" . }}">
             <button id="contact-button" class="btn btn-success black-90">{{ .Params.button_text }}</button>
+          </a>
+        </li>
+      {{ end }}
+      {{ range .Translations }}
+        <li class="list f5 f4-ns fw4 dib {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
+          <a class="hover-white no-underline white-90" href="{{ .RelPermalink }}">
+            <img src="/images/{{ .Lang }}.svg" alt="{{ .Lang }} flag" style="width:2em;margin-right:5px;">
           </a>
         </li>
       {{ end }}

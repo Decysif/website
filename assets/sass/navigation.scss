@@ -14,6 +14,8 @@ nav.navbar {
   .navbar-title {
     color: #fff;
     text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
   }
 
   // Hamburger menu styles
@@ -81,7 +83,7 @@ nav.navbar {
     }
   }
 
-  // Mobile navigation styles
+  // Navbar items and links
   .nav-links {
     display: flex;
     align-items: center;
@@ -94,9 +96,17 @@ nav.navbar {
       align-items: center;
     }
 
-    li {
+    li.nav-item {
       padding: 0 1rem;
       font-size: 1rem;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: #ffcc00;
+        background-color: #333;
+        border-radius: 5px;
+      }
 
       a {
         text-decoration: none;
@@ -104,21 +114,44 @@ nav.navbar {
         font-weight: 400;
 
         &:hover {
-          color: #ccc;
+          color: #ffcc00;  // Gold accent on hover
         }
       }
     }
+
+    // Flags in the language selector
+    li img {
+      vertical-align: middle;
+    }
   }
 
-  // Hamburger menu for mobile
+  // Contact button styling
+  #contact-button {
+    background-color: #ffcc00;  // Gold button
+    color: black;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  // Mobile styles
   @media screen and (max-width: 992px) {
     .nav-links {
-      display: none; // Hidden by default
+      display: none;
     }
 
     #main-navigation.open {
       display: flex;
-      flex-direction: column; // Stack items vertically on mobile
+      flex-direction: column;
       width: 100%;
       background-color: #000;
       padding: 1rem 0;
@@ -129,25 +162,17 @@ nav.navbar {
     }
 
     ul {
-      display: flex;
       flex-direction: column;
-      list-style: none;
-      padding: 0;
-      margin: 0;
     }
 
     .nav-item {
       padding: 0.75rem 1rem;
       margin: 0;
       width: 100%;
-      text-align: center; // Ensure the items are centered
+      text-align: center;
 
       a {
-        text-decoration: none;
-        color: white;
-        font-size: 1rem;
-        font-weight: 400;
-        display: block; // Make the link take up the full width
+        display: block;
         width: 100%;
         padding: 0.75rem 0;
         transition: background-color 0.3s ease, color 0.3s ease;
@@ -159,7 +184,6 @@ nav.navbar {
     }
   }
 
-  // Adjustments for larger screens
   @media (min-width: 992px) {
     .nav-links {
       display: flex;

@@ -47,7 +47,7 @@
         </li>
       {{ end }}
       {{ with .Site.GetPage "/contact.md" }}
-        <li class="nav-item {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
+        <li class="nav-item-btn {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
           <a class="hover-white no-underline white-90" href="{{ .RelPermalink }}" title="{{ i18n "pageTitle" . }}">
             <button id="contact-button" class="btn btn-success black-90">{{ .Params.button_text }}</button>
           </a>

@@ -3,7 +3,7 @@ title: "DéCySif"
 sectiontitle: "Accueil"
 cascade:
   featured_image: '/images/Decysif.png'
-description: "**La vérification formelle au service de la sécurité et la sûreté**"
+description: "La vérification formelle au service de la sécurité et la sûreté"
 synopsis: "DéCySif est un projet i-Demo régional de R&D regroupant AdaCore,
 l'Inria, OCamlPro et TrustInSoft. Il vise à améliorer la sécurité et la sûreté
 des systèmes critiques en utilisant des outils de vérification formelle.<br />Le projet prendra place du **1er Novembre 2022** au **1er Novembre 2027**."

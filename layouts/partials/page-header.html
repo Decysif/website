@@ -8,9 +8,11 @@
           {{ with .Site.Params.header_logo }}
         <img src="{{ relURL . }}" class="w100 mw5-ns" id="headerlogo" alt="{{ $.Site.Title }}" />
           {{ end }}
-          {{ with .Params.description | markdownify }}
+          {{ with .Params.description }}
         <div class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4 page-subtitle">
-          {{ . }}
+          <strong>
+            {{ . }}
+          </strong>
         </div>
           {{ end }}
         {{ end }}

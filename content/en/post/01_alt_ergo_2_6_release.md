@@ -1,6 +1,6 @@
 ---
 date: 2024-10-18T11:22:33Z
-description: "**Alt-Ergo 2.6 is sponsored by DéCySif**"
+description: "Alt-Ergo 2.6 is sponsored by DéCySif"
 featured_image: '/images/Decysif.png'
 thumbnail: '/images/alt-ergo-8-colors-blank-bg.png'
 tags: ["Alt-Ergo", "Prover", "Bit-Vector", "Model Generation", "Optimization", "Release"]

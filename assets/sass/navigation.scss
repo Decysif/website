@@ -125,7 +125,7 @@ nav.navbar {
     }
   }
 
-  // Contact button styling
+  // Contact button specific styles (Overrides nav-item styles)
   #contact-button {
     background-color: #ffcc00;  // Gold button
     color: black;
@@ -140,6 +140,16 @@ nav.navbar {
       background-color: #fff;
       color: #000;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    // Remove hover border effect from the nav-item class
+    &.li.nav-item {
+      border: none;
+      &:hover {
+        background-color: #fff;  // Keep hover effect clean
+        border: none;  // Prevent square border issue
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Keep round shape on hover
+      }
     }
   }
 

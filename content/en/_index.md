@@ -3,7 +3,7 @@ title: "DéCySif"
 sectiontitle: "Home"
 cascade:
   featured_image: '/images/Decysif.png'
-description: "**Formal verification in the service of safety and security**"
+description: "Formal verification in the service of safety and security"
 synopsis: "DéCySif is a regional R&D project funded by an i-Démo call and the
 Ile-de-France French region gathering AdaCore, Inria, OCamlPro and TrustInSoft.
 Its objective is to improve the safety and security of critical systems using

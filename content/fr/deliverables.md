@@ -1,6 +1,6 @@
 ---
 layout: "deliverables"
-description: "**La vérification formelle au service de la sécurité et la sûreté**"
+description: "La vérification formelle au service de la sécurité et la sûreté"
 title: "Livrables"
 synopsis: "Le projet DéCySif fourni un cadre pour que le consortium puisse aboutir à un ensemble de livrables ainsi qu'une suite de papiers scientifiques divers qui seront réunis ci-dessous à mesure qu'ils voient le jour."
 project_deliverables:

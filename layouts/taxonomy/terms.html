@@ -1,0 +1,45 @@
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
+{{ define "main" }}
+  <div class="taxonomy-listing">
+
+    <!-- Taxonomy Description -->
+    <article class="taxonomy-description cf pa3 pa4-m pa4-l">
+      <div class="taxonomy-text measure-wide-l center f4 lh-copy nested-copy-line-height nested-links {{ $.Param "text_color" | default "mid-gray" }}">
+        {{ .Content }}
+      </div>
+    </article>
+
+    <!-- Taxonomy Terms and Posts -->
+    <div class="taxonomy-terms mw8 center">
+      <section class="taxonomy-items ph4">
+        {{ range $term := .Data.Pages }}
+          <div class="term-header mb4">
+            <h2 class="f4 term-title">
+              <a href="{{ $term.RelPermalink }}" class="term-link link blue hover-black">
+                {{ $.Data.Singular | humanize }}: {{ $term.LinkTitle }}
+              </a>
+            </h2>
+          </div>
+
+          <!-- Posts associated with each term -->
+          <div class="taxonomy-terms__container mb4">
+            {{ range $term.Pages }}
+              <div class="term-post bg-white pa4 mb3 nested-copy-line-height">
+                <span class="f6 db">{{ humanize .Section }}</span>
+                <h1 class="f3 near-black">
+                  <a href="{{ .RelPermalink }}" class="link black dim">
+                    {{ .Title }}
+                  </a>
+                </h1>
+                <div class="nested-links f5 lh-copy nested-copy-line-height">
+                  {{ .Summary  }}
+                </div>
+              </div>
+            {{ end }}
+          </div>
+        {{ end }}
+      </section>
+    </div>
+
+  </div>
+{{ end }}

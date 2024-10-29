@@ -1,6 +1,5 @@
 {{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
 {{ define "main" }}
-<div id="BEGIN:layouts/index.html"></div>
 <section class="ph4 pv5 bg-light-gray">
   <div class="mw7 center">
     <p class="f4 lh-copy">{{ .Params.synopsis | markdownify }}</p>
@@ -54,5 +53,4 @@
   </div>
 </section>
 
-<div id="END:layouts/index.html"></div>
 {{ end }}

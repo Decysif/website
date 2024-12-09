@@ -80,9 +80,9 @@
         <h4 class="f5 fw6 dark-blue">{{ .papername }}</h4>
         <p class="f6">
           {{ if eq $parent.Lang "fr" }}
-          <strong>Publié:</strong> {{ .date }}
+          <strong>Publié:</strong> {{ .wherepublished }}, {{ .date }}
           {{ else }}
-          <strong>Published:</strong> {{ .date }}
+          <strong>Published:</strong> {{ .wherepublished }}, {{ .date }}
           {{ end }}
         </p>
         <p class="f6">

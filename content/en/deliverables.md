@@ -32,6 +32,7 @@ project_deliverables:
 publications:
   - papername: "Formally Verified Rounding Errors of the Logarithm-Sum-Exponential Function"
     url: "https://inria.hal.science/hal-04674600"
+    wherepublished: "Formal Methods in Computer-Aided Design"
     date: "2024"
     authors:
       - "Paul Bonnot"
@@ -39,4 +40,14 @@ publications:
       - "Florian Faissole"
       - "Claude Marché"
       - "Raphaël Rieu-Helft"
+  - papername: "Generating and Certifying Accuracy Properties of Floating-Point Programs"
+    url: "https://inria.hal.science/hal-04820735"
+    wherepublished: "Inria Research Report"
+    date: "2024"
+    authors:
+      - "Paul Bonnot"
+      - "Benoît Boyer"
+      - "Florian Faissole"
+      - "Claude Marché"
+
 ---

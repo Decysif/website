@@ -49,5 +49,21 @@ publications:
       - "Benoît Boyer"
       - "Florian Faissole"
       - "Claude Marché"
+  - papername: "Remonter les barrières pour ouvrir une clôture"
+    url: "https://inria.hal.science/hal-04859517"
+    wherepublished: "36es Journées Francophones des Langages Applicatifs"
+    date: "2025"
+    authors:
+      - "Paul Patault"
+      - "Arnaud Golfouse"
+      - "Xavier Denis"
+  - papername: "Faire chauffer Why3 avec de l’induction"
+    url: "https://inria.hal.science/hal-04859412"
+    wherepublished: "36es Journées Francophones des Langages Applicatifs"
+    date: "2025"
+    authors:
+      - "Henri Saudubray"
+      - "Jean-Christophe Filliâtre"
+      - "Andrei Paskevich"
 
 ---

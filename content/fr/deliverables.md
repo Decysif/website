@@ -5,7 +5,7 @@ title: "Livrables"
 synopsis: "Le projet DéCySif fourni un cadre pour que le consortium puisse aboutir à un ensemble de livrables ainsi qu'une suite de papiers scientifiques divers qui seront réunis ci-dessous à mesure qu'ils voient le jour."
 project_deliverables:
   repository: "https://github.com/Decysif/livrables/tree/master"
-  lots: 
+  lots:
     - lot_nb: "Lot 1"
       papers:
         - id: "L1.1"
@@ -49,4 +49,20 @@ publications:
       - "Benoît Boyer"
       - "Florian Faissole"
       - "Claude Marché"
+  - papername: "Remonter les barrières pour ouvrir une clôture"
+    url: "https://inria.hal.science/hal-04859517"
+    wherepublished: "36es Journées Francophones des Langages Applicatifs"
+    date: "2025"
+    authors:
+      - "Paul Patault"
+      - "Arnaud Golfouse"
+      - "Xavier Denis"
+  - papername: "Faire chauffer Why3 avec de l’induction"
+    url: "https://inria.hal.science/hal-04859412"
+    wherepublished: "36es Journées Francophones des Langages Applicatifs"
+    date: "2025"
+    authors:
+      - "Henri Saudubray"
+      - "Jean-Christophe Filliâtre"
+      - "Andrei Paskevich"
 ---

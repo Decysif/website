@@ -28,6 +28,19 @@ project_deliverables:
             - "Matteo Manighetti (Inria & Université Paris-Saclay)"
             - "Claude Marché (Inria & Université Paris-Saclay)"
           pdf_url: "/pdf/livrable_l2_1.pdf"
+        - id: "L3.1"
+          name: "Memory Models for Pointer Programs: a State of the Art from the Point of View of Décysif Partners"
+          synopsys: "The purpose of this document is to summarize the different memory models implemented in the tools of the Décysif partners, focusing on the important design choices, and briefly compare them with each other and with other existing approaches in the international community of deductive verification. From such a summary, we derive and expose some future work we want to perform in the context of the Décysif project."
+          leader: "Inria"
+          authors:
+            - "Claude Marché (Inria & Université Paris-Saclay)"
+            - "Guillaume Cluzel (TrustInSoft)"
+            - "Claire Dross (AdaCore)"
+            - "Jean-Christophe Filliâtre (CNRS & Université Paris-Saclay)"
+            - "Jacques-Henri Jourdan (CNRS & Université Paris-Saclay)"
+            - "Andrei Paskevich (Université Paris-Saclay)"
+            - "Raphaël Rieu-Helft (TrustInSoft)"
+          pdf_url: "/pdf/livrable_l3_1.pdf"
 
 publications:
   - papername: "Formally Verified Rounding Errors of the Logarithm-Sum-Exponential Function"

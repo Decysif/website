@@ -1,5 +1,5 @@
 ---
-date: 2023-12-19T10:58:08-04:00
+date: 2023-12-19T10:58:08+01:00
 description: "Project members meet for the launch!"
 featured_image: '/images/Decysif.png'
 thumbnail: '/images/logo_decysif_excellence_for_security_white.svg'

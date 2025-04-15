@@ -1,5 +1,5 @@
 ---
-date: 2024-10-18T11:22:33Z
+date: 2024-10-18T11:22:33+01:00
 description: "Alt-Ergo 2.6 est sponsorisé par DéCySif"
 featured_image: '/images/Decysif.png'
 thumbnail: '/images/alt-ergo-8-colors-blank-bg.png'

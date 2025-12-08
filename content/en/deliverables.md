@@ -78,5 +78,13 @@ publications:
       - "Henri Saudubray"
       - "Jean-Christophe Filliâtre"
       - "Andrei Paskevich"
+  - papername: "Using Ghost Ownership to Verify Union-Find and Persistent Arrays in Rust"
+    url: "https://hal.science/hal-05396946"
+    wherepublished: "Certified Programs and Proofs 2026 (CPP'26)"
+    date: "2026"
+    authors:
+      - "Arnaud Golfouse"
+      - "Armaël Guéneau"
+      - "Jacques-Henri Jourdan"
 
 ---

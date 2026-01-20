@@ -78,6 +78,14 @@ publications:
       - "Henri Saudubray"
       - "Jean-Christophe Filliâtre"
       - "Andrei Paskevich"
+  - papername: "When Separation Arithmetic is Enough"
+    url: "https://hal.science/hal-05132556v2"
+    wherepublished: "20th International Conference on Integrated Formal Methods"
+    date: "2025"
+    authors:
+      - "Jean-Christophe Filliâtre"
+      - "Andrei Paskevich"
+      - "Olivier Danvy"
   - papername: "Using Ghost Ownership to Verify Union-Find and Persistent Arrays in Rust"
     url: "https://hal.science/hal-05396946"
     wherepublished: "Certified Programs and Proofs 2026 (CPP'26)"
@@ -86,5 +94,11 @@ publications:
       - "Arnaud Golfouse"
       - "Armaël Guéneau"
       - "Jacques-Henri Jourdan"
-
+  - papername: "Boucler la boucle du parcours de Morris"
+    url: "https://inria.hal.science/hal-05428049"
+    wherepublished: "Journées Francophones des Langages Applicatifs 2026 (JFLA'26)"
+    date: "2026"
+    authors:
+      - "Arnaud Golfouse"
+      - "Paul Patault"
 ---

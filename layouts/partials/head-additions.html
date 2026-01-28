@@ -1,9 +1,9 @@
 <meta property="og:image" content="/images/logo_svg_decysif_security_by_design_white_1.svg"/>
 {{ $opts := dict "transpiler" "libsass" "targetPath" "css/style.css" }}
-{{ with resources.Get "sass/main.scss" | toCSS $opts | minify | fingerprint }}
+{{ with resources.Get "sass/main.scss" | css.Sass $opts | minify | fingerprint }}
  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
 {{ end }}
 {{ $opts := dict "transpiler" "libsass" "targetPath" "css/navigation.css" }}
-{{ with resources.Get "sass/navigation.scss" | toCSS $opts | minify | fingerprint }}
+{{ with resources.Get "sass/navigation.scss" | css.Sass $opts | minify | fingerprint }}
  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
 {{ end }}

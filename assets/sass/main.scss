@@ -1,171 +1,95 @@
-// Global header styles
+// Global header styles - simplified and fixed
 .site-header,
-.page-header {
+header.page-cover,
+header.page-header-no-image {
   width: 100%;
   position: relative;
   z-index: 1;
+}
+
+// Page cover with background image
+header.page-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// Header without image
+header.page-header-no-image {
+  background-color: #1a1a1a;
+}
+
+// Content inside headers
+.header-content,
+.page-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  padding: 2rem 1rem;
 
-  // Remove text-align overrides in case flexbox conflicts exist
-  &.page-header-no-image {
-    background-color: #1a1a1a;
-    padding: 3rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  &.page-cover {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: 1;
-    }
-  }
-
-  .page-content {
-    position: relative;
-    z-index: 2;
-    padding: 2rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center; /* Ensure content (logo) stays centered */
-    align-items: center;
-    flex-direction: column; /* Stack content vertically */
-
-    @media screen and (min-width: 48em) {
-      padding: 4rem 2rem;
-    }
-  }
-
-  .page-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    text-align: center;
-
-    @media screen and (min-width: 48em) {
-      font-size: 3.5rem;
-    }
-
-    @media screen and (min-width: 64em) {
-      font-size: 4.5rem;
-    }
-  }
-
-  .page-subtitle {
-    font-size: 1.25rem;
-    font-weight: 300;
-    color: #eaeaea;
-    max-width: 40rem;
-    margin: 0 auto;
-    text-align: center;
-
-    @media screen and (min-width: 48em) {
-      font-size: 1.5rem;
-    }
-
-    @media screen and (min-width: 64em) {
-      font-size: 1.75rem;
-    }
+  @media screen and (min-width: 48em) {
+    padding: 4rem 2rem;
   }
 }
 
-.tc-l {
-  text-align: center;
-}
-
-// Centering the header logo
+// Header logo
 #headerlogo {
   display: block;
-  margin: 0 auto; /* Center the logo horizontally */
-  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  margin: 0 auto;
+  max-width: 100%;
   height: auto;
-  padding: 1rem; /* Adjust padding to prevent any content overflow */
+  padding: 1rem;
 
-  /* Force centering at specific breakpoints */
   @media screen and (max-width: 960px) {
-    max-width: 75%; /* Adjust width for smaller screens */
+    max-width: 75%;
   }
 
   @media screen and (max-width: 480px) {
-    max-width: 60%; /* Further reduce the logo size on very small screens */
+    max-width: 60%;
   }
 }
 
-
-// Flexbox centering for headers
-.site-header,
-.page-header {
-  display: flex;
-  flex-direction: column; /* Stack the content vertically */
-  justify-content: center; /* Vertically center the content */
-  align-items: center; /* Horizontally center the content */
-
-  .header-content,
-  .page-content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column; /* Keep everything in the center */
-    align-items: center;
-    text-align: center; /* Ensure text is also centered */
-  }
+// Page subtitle in headers
+.page-subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #eaeaea;
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
 
   @media screen and (min-width: 48em) {
-    padding: 6rem 3rem;
+    font-size: 1.5rem;
   }
 }
 
+// Ensure images don't overflow
 img {
   max-width: 100%;
-  text-align: center;
   height: auto;
 }
 
-// Adjust padding and spacing for different screen sizes
-@media screen and (min-width: 48em) {
-  .site-header,
-  .page-header {
-    padding: 6rem 3rem;
-  }
-
-  .header-content,
-  .page-content {
-    padding: 6rem 3rem;
-  }
+// Main content areas - ensure proper padding
+main {
+  padding: 0;
 }
 
 // Styling for the main deliverables and publications container
 .deliverables,
 .publications {
   margin-top: 2rem;
-  padding: 0 1rem;
+  padding: 0 2rem;
 
-  // Lots and publications containers
+  @media screen and (min-width: 48em) {
+    padding: 0 3rem;
+  }
+
   .lots,
   .publication-list {
     margin-top: 2rem;
 
-    // Individual deliverables (papers) and publications
     .paper,
     .publication {
       background-color: #f9f9f9;
@@ -175,13 +99,11 @@ img {
       border-radius: 8px;
       transition: all 0.3s ease;
 
-      // Box shadow on hover for a subtle effect
       &:hover {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         transform: translateY(-3px);
       }
 
-      // Headings for each paper or publication
       h5,
       h4 {
         color: #0070f3;
@@ -190,7 +112,6 @@ img {
         margin-bottom: 0.75rem;
       }
 
-      // Synopsis and other smaller text elements
       p {
         font-size: 0.95rem;
         margin-bottom: 0.5rem;
@@ -202,7 +123,6 @@ img {
         }
       }
 
-      // List of authors (styled as a neat bullet list)
       ul {
         margin-top: 0.5rem;
         margin-bottom: 0.75rem;
@@ -216,7 +136,6 @@ img {
         }
       }
 
-      // Links for PDF download or publication
       a {
         color: #0070f3;
         font-weight: 500;
@@ -242,7 +161,6 @@ h3 {
   margin-bottom: 1rem;
 }
 
-// Title for lots and publications within each section
 h4,
 h5 {
   color: #333;
@@ -260,13 +178,11 @@ h5 {
   padding: 1rem;
   max-width: 1000px;
 
-  // Responsive padding and spacing
   @media (min-width: 768px) {
     padding: 2rem;
   }
 }
 
-// Section title styling
 .blog-title {
   font-size: 2rem;
   font-weight: 700;
@@ -279,7 +195,6 @@ h5 {
   }
 }
 
-// Main article content
 .blog-content {
   font-size: 1.125rem;
   line-height: 1.6;
@@ -289,7 +204,6 @@ h5 {
   max-width: 700px;
 }
 
-// Post card styling
 .post-card {
   width: 100%;
   max-width: 800px;
@@ -312,7 +226,6 @@ h5 {
     }
   }
 
-  // Title within each post card
   h3 {
     font-size: 1.25rem;
     font-weight: 600;
@@ -328,7 +241,6 @@ h5 {
     }
   }
 
-  // Excerpt or content preview
   p {
     font-size: 1rem;
     color: #555;
@@ -340,7 +252,6 @@ h5 {
     }
   }
 
-  // Button to read more
   .read-more {
     display: inline-block;
     margin-top: 1rem;
@@ -358,7 +269,6 @@ h5 {
   }
 }
 
-// Pagination section
 .pagination {
   display: flex;
   justify-content: center;
@@ -382,9 +292,7 @@ h5 {
   }
 }
 
-/* taxonomy-terms.scss */
-
-/* Styles for the taxonomy listing */
+/* Taxonomy listing styles */
 .taxonomy-listing {
   .taxonomy-description {
     text-align: center;
@@ -400,44 +308,40 @@ h5 {
   }
 
   .term-post {
-    background-color: #f9f9f9; /* Background color for articles */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 1.5rem; /* Padding for content */
-    transition: box-shadow 0.2s ease; /* Smooth transition for hover effects */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: box-shadow 0.2s ease;
 
-    /* Change shadow on hover */
     &:hover {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     }
 
-    /* Title and summary styles */
     h1 {
-      font-size: 1.5rem; /* Title size */
-      color: #333; /* Title color */
+      font-size: 1.5rem;
+      color: #333;
     }
 
     a {
-      color: inherit; /* Inherit color from parent */
-      text-decoration: none; /* Remove underline */
+      color: inherit;
+      text-decoration: none;
       &:hover {
-        text-decoration: underline; /* Underline on hover */
+        text-decoration: underline;
       }
     }
 
-    /* Styling for section label */
     span {
-      font-weight: bold; /* Make section label bold */
-      color: #777; /* Grey color for section label */
-      display: block; /* Make section label block */
-      margin-bottom: 0.5rem; /* Margin for spacing */
+      font-weight: bold;
+      color: #777;
+      display: block;
+      margin-bottom: 0.5rem;
     }
 
-    /* Additional link styling */
     .nested-links {
-      margin-top: 0.5rem; /* Margin for spacing */
-      font-size: 0.95rem; /* Font size for nested links */
-      line-height: 1.6; /* Line height for readability */
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
     }
   }
 }

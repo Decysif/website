@@ -8,7 +8,8 @@ theme = 'ananke'
 defaultContentLanguage = "fr"
 defaultContentLanguageInSubdir = true
 
-Paginate = 10
+[pagination]
+pagerSize = 10
 
 [languages]
   [languages.fr]

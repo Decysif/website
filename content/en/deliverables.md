@@ -1,4 +1,5 @@
 ---
+type: "page"
 layout: "deliverables"
 description: "Formal verification in the service of safety and security"
 title: "Deliverables"

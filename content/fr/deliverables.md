@@ -1,4 +1,5 @@
 ---
+type: "page"
 layout: "deliverables"
 description: "La vérification formelle au service de la sécurité et la sûreté"
 title: "Livrables"

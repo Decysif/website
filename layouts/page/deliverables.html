@@ -27,7 +27,7 @@
     {{ $parent := . }} <!-- Save the parent context -->
     {{ range .Params.project_deliverables.lots }}
       <div class="lot mv4">
-        <h4 class="f5 fw6 ttu dark-gray tc">{{ .lot }}</h4>
+        <h4 class="f5 fw6 ttu dark-gray tc">{{ .lot_nb }}</h4>
         <div class="papers">
           {{ range .papers }}
             <div class="paper ba b--light-gray pa3 mb3 br2">
